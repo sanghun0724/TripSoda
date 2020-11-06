@@ -90,6 +90,8 @@ class HomeViewController:UIViewController,UICollectionViewDelegate,UICollectionV
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "more" {
+            
+        }
     }
 }
