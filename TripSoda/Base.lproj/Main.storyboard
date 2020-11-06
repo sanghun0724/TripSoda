@@ -19,7 +19,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTF-nb-41v">
                                 <rect key="frame" x="107" y="142" width="200" height="450"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="구매코드 입력"/>
                                 <connections>
                                     <segue destination="8i0-96-i6M" kind="show" id="ryG-W9-g2f"/>
@@ -276,7 +276,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="나의 투어일정" id="2gh-Ma-9m8">
                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="MCC-MV-QkT"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="list.triangle" catalog="system" id="vXv-WF-3qY"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="list.triangle" catalog="system" id="vXv-WF-3qY">
+                            <connections>
+                                <action selector="menuItem:" destination="GY1-5Y-9lo" id="V0e-uS-w3B"/>
+                            </connections>
+                        </barButtonItem>
                         <connections>
                             <outlet property="backBarButtonItem" destination="MCC-MV-QkT" id="BUS-IL-gqK"/>
                         </connections>

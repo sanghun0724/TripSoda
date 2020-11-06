@@ -1,4 +1,5 @@
 PODS:
+  - DropDown (2.3.13)
   - FBSDKCoreKit (8.1.0):
     - FBSDKCoreKit/Basics (= 8.1.0)
     - FBSDKCoreKit/Core (= 8.1.0)
@@ -11,17 +12,20 @@ PODS:
     - FBSDKCoreKit (~> 8.1.0)
 
 DEPENDENCIES:
+  - DropDown
   - FBSDKLoginKit
 
 SPEC REPOS:
   trunk:
+    - DropDown
     - FBSDKCoreKit
     - FBSDKLoginKit
 
 SPEC CHECKSUMS:
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   FBSDKCoreKit: b3ca27e124dae67122d3bb47c8f96800b39986a6
   FBSDKLoginKit: a3a92ba9380759cd0c1aa8319465fb5f2857c602
 
-PODFILE CHECKSUM: bba78e9712036f55c83e8cf27e6ef91f31489ee1
+PODFILE CHECKSUM: ce6995c6f850dadf14da3ab4772f62991b8a4abd
 
 COCOAPODS: 1.10.0
