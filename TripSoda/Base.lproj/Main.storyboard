@@ -331,6 +331,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="NMF-U9-soj"/>
                     <navigationItem key="navigationItem" id="y5Y-DS-KnQ"/>
+                    <connections>
+                        <outlet property="myMap" destination="3JF-zR-chG" id="TaG-nL-QxW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1bH-pU-ccg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
