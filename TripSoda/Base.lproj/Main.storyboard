@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTF-nb-41v">
-                                <rect key="frame" x="107" y="142" width="200" height="450"/>
+                                <rect key="frame" x="107" y="98" width="200" height="494"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="구매코드 입력"/>
                                 <connections>
@@ -64,7 +64,7 @@
             <objects>
                 <viewController id="8i0-96-i6M" customClass="BuyingCodeViewController" customModule="TripSoda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="11d-fc-UbG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="구매코드 입력" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEm-2y-grp">
@@ -299,10 +299,33 @@
         <!--Item-->
         <scene sceneID="P82-ON-2jt">
             <objects>
-                <viewController id="lpI-ne-HR5" sceneMemberID="viewController">
+                <viewController id="lpI-ne-HR5" customClass="MapViewController" customModule="TripSoda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L1u-aZ-IVn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3JF-zR-chG">
+                                <rect key="frame" x="0.0" y="44" width="429" height="769"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QAG-eg-Bft">
+                                <rect key="frame" x="0.0" y="753" width="414" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKA-i7-vZM">
+                                        <rect key="frame" x="184" y="15" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZW-BV-VI9">
+                                <rect key="frame" x="361" y="677" width="33" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="location.fill" catalog="system"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="30j-Jk-3Kd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -311,7 +334,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1bH-pU-ccg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5717" y="2116"/>
+            <point key="canvasLocation" x="5715.9420289855079" y="2115.4017857142858"/>
         </scene>
         <!--Item-->
         <scene sceneID="jmd-XK-iMr">
@@ -553,7 +576,7 @@
                                         <state key="normal" title="오디오 가이드 "/>
                                         <connections>
                                             <action selector="audioButton:" destination="tyr-Sn-pos" eventType="touchUpInside" id="2NN-Rl-bXj"/>
-                                            <segue destination="QK6-a5-Zex" kind="push" identifier="nav" id="Mg9-uA-rGq"/>
+                                            <segue destination="QK6-a5-Zex" kind="push" identifier="nav" id="U2K-QE-qv9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -785,7 +808,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GZ3-kf-T5l"/>
+        <segue reference="E3D-rv-KBy"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.backward.2.fill" catalog="system" width="128" height="86"/>
@@ -794,6 +817,7 @@
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="list.triangle" catalog="system" width="128" height="91"/>
+        <image name="location.fill" catalog="system" width="128" height="121"/>
         <image name="person.2" catalog="system" width="128" height="81"/>
         <image name="person.fill.questionmark" catalog="system" width="128" height="104"/>
         <image name="scribble.variable" catalog="system" width="128" height="118"/>

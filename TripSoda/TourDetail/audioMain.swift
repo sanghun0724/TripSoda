@@ -18,6 +18,8 @@ class audioMain: UIViewController,AVAudioPlayerDelegate {
     @IBOutlet var progressSlider: UISlider!
     @IBOutlet var collectionView:UICollectionView!
     
+    // Problem: Push로 했는데도 탭바가 자꾸 없어짐 -> 각 여행지에 맞는 음악파일에따라 맞게 prepare 메소드로
+    // 전달하면서 sague 써보기
     
     let collectionDatasource = audioMainCollection()
     

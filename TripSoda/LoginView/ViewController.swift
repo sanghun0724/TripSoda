@@ -9,7 +9,7 @@ import UIKit
 import FBSDKLoginKit
 
 class ViewController: UIViewController,LoginButtonDelegate {
-    
+    //FACEBOOK TESTID: 107758301141683 // PASSWORD: 123456@
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,7 @@ class ViewController: UIViewController,LoginButtonDelegate {
             guard let nextView = nextViewController else {
                 return
             }
+            
             nextView.modalPresentationStyle = .fullScreen
             self.present(nextView, animated: true, completion: nil)
         }
@@ -40,6 +41,13 @@ class ViewController: UIViewController,LoginButtonDelegate {
             view.addSubview(loginButton)
             
             
+            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "tapbar")
+            guard let nextView = nextViewController else {
+                return
+            }
+            
+            nextView.modalPresentationStyle = .fullScreen
+            self.present(nextView, animated: true, completion: nil)
             //        NotificationCenter.default.addObserver(forName: .AccessTokenDidChange, object: nil, queue: OperationQueue.main) { (notification) in
             //
             //            // Print out access token
