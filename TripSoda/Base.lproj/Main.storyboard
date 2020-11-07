@@ -566,14 +566,14 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dv1-vW-EkU">
                                                 <rect key="frame" x="0.0" y="20" width="414" height="994.5"/>
-                                                <mutableString key="text">2020-11-07 16:10:04.256931+0900 TripSoda[34449:10557394] &lt;Warning&gt;: Please set a value for FacebookAutoLogAppEventsEnabled. Set the flag to TRUE if you want to collect app install, app launch and in-app purchase events automatically. To request user consent before collecting data, set the flag value to FALSE, then change to TRUE once user consent is received. Learn more: https://developers.facebook.com/docs/app-events/getting-started-app-events-ios#disable-auto-events.
+                                                <string key="text">2020-11-07 16:10:04.256931+0900 TripSoda[34449:10557394] &lt;Warning&gt;: Please set a value for FacebookAutoLogAppEventsEnabled. Set the flag to TRUE if you want to collect app install, app launch and in-app purchase events automatically. To request user consent before collecting data, set the flag value to FALSE, then change to TRUE once user consent is received. Learn more: https://developers.facebook.com/docs/app-events/getting-started-app-events-ios#disable-auto-events.
 2020-11-07 16:10:04.257254+0900 TripSoda[34449:10557394] &lt;Warning&gt;: You haven't set a value for FacebookAdvertiserIDCollectionEnabled. Set the flag to TRUE if you want to collect Advertiser ID for better advertising and analytics results.
 2020-11-07 16:10:04.884033+0900 TripSoda[34449:10557559] [Client] Updating selectors after delegate removal failed with: Error Domain=NSCocoaErrorDomain Code=4099 "The connection to service on pid 88 named com.apple.commcenter.coretelephony.xpc was invalidated from this process." UserInfo={NSDebugDescription=The connection to service on pid 88 named com.apple.commcenter.coretelephony.xpc was invalidated from this process.}
 2020-11-07 16:10:04.939525+0900 TripSoda[34449:10557560] [tcp] tcp_input [C2.1:3] flags=[R.] seq=1512036258, ack=979456767, win=265 state=CLOSED rcv_nxt=1512036218, snd_una=979456766
 2020-11-07 16:10:05.373397+0900 TripSoda[34449:10557394] Failed to set (doneAccessory) user defined inspected property on (UITextField): [&lt;UITextField 0x1530081d0&gt; setValue:forUndefinedKey:]: this class is not key value coding-compliant for the key doneAccessory.
 2020-11-07 16:10:05.622178+0900 TripSoda[34449:10557557] [tcp] tcp_input [C4.1:3] flags=[R.] seq=1239130335, ack=2495378765, win=270 state=CLOSED rcv_nxt=1239130295, snd_una=2495378764
 2020-11-07 16:10:06.145651+0900 TripSoda[34449:10557394] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitTruffle-PhonePad; using 26000_PortraitTruffle_iPhone-Complex-Pad_Default
-</mutableString>
+</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -640,14 +640,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SW0-Fh-W89">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="audiocell" id="SW0-Fh-W89" customClass="audioCell" customModule="TripSoda" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="460"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ysi-NZ-Ddi">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="460"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UAX-s6-WSF">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="book.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UAX-s6-WSF">
                                                     <rect key="frame" x="45" y="8" width="328" height="299"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -668,8 +668,17 @@
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="460"/>
+                                        <connections>
+                                            <outlet property="audioImage" destination="UAX-s6-WSF" id="vKq-RQ-tqH"/>
+                                            <outlet property="audioSub" destination="BMe-tw-eom" id="Vft-4t-9wI"/>
+                                            <outlet property="audioTitle" destination="MFc-iO-mDz" id="Sb8-g4-EVv"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="QK6-a5-Zex" id="HEb-yL-TlD"/>
+                                    <outlet property="delegate" destination="QK6-a5-Zex" id="AYF-Qi-vjN"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3q-3C-Hhe">
                                 <rect key="frame" x="319" y="648" width="75" height="21"/>
@@ -749,6 +758,7 @@
                         <barButtonItem key="backBarButtonItem" image="chevron.backward" catalog="system" id="5uC-3d-feo"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="Zdi-aW-rUj" id="dNa-Gr-InT"/>
                         <outlet property="playPauseButton" destination="XUn-Ec-Kji" id="RpO-I4-dlI"/>
                         <outlet property="progressSlider" destination="NwT-5E-uf6" id="L2h-9b-Nhd"/>
                         <outlet property="timeLabel" destination="JWQ-Tf-khq" id="CJ8-dj-Jm3"/>
@@ -782,6 +792,7 @@
         <segue reference="GZ3-kf-T5l"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="book.fill" catalog="system" width="128" height="102"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="list.triangle" catalog="system" width="128" height="91"/>
         <image name="person.2" catalog="system" width="128" height="81"/>

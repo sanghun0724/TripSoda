@@ -16,6 +16,9 @@ class audioMain: UIViewController,AVAudioPlayerDelegate {
     @IBOutlet var playPauseButton: UIButton!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var progressSlider: UISlider!
+    @IBOutlet var collectionView:UICollectionView!
+    
+    let collectionDatasource = audioMainCollection()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +26,26 @@ class audioMain: UIViewController,AVAudioPlayerDelegate {
         playPauseButton.setImage(UIImage(named: "button_play"), for: UIControl.State.normal)
         playPauseButton.setImage(UIImage(named: "button_pause"), for: UIControl.State.selected)
         initializePlayer()
-        // Do any additional setup after loading the view.
+        collectionView.delegate = collectionDatasource
+        collectionView.dataSource = collectionDatasource
+        UIDesine()
+        collectionView.reloadData()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func UIDesine() {
+        let collectionViewLayout:UICollectionViewFlowLayout = {
+            let layout = UICollectionViewFlowLayout()
+            layout.itemSize = CGSize(width: 414 , height: 460 )
+            layout.minimumLineSpacing = 20
+            layout.sectionInset = UIEdgeInsets.zero
+            layout.scrollDirection = .horizontal
+            return layout
+        }()
+        collectionView.collectionViewLayout = collectionViewLayout
     }
     
     func initializePlayer() {

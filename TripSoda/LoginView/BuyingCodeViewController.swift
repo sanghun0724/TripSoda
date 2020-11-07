@@ -76,12 +76,7 @@ class BuyingCodeViewController: UIViewController,UIGestureRecognizerDelegate,UIN
         findTFWithTag(tag: curTag)?.becomeFirstResponder()
         self.navigationController?.popViewController(animated: true)
     }
-    //      @objc
-    //      func doBtnNext() {
-    //          // increment or roll over
-    //          curTag = curTag == maxTag ? 0 : curTag+1
-    //          findTFWithTag(tag: curTag)?.becomeFirstResponder()
-    //      }
+    
     @objc
     func doBtnSubmit() {
         check()

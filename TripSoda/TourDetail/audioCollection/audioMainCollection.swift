@@ -7,23 +7,31 @@
 
 import UIKit
 
-class audioMainCollection: NSObject{
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class audioMainCollection: NSObject,UICollectionViewDataSource,UICollectionViewDelegate {
+    
+    let audioLabel = ["고씨동굴","영월파크","서울공원"]
+    let audioSubLabel = ["3개의 오디오 중 첫번째 이야기","3개의 오디오 중 첫번째 이야기","3개의 오디오 중 첫번째 이야기"]
+    let cellIdentifier = "audiocell"
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        self.audioLabel.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell:audioCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? audioCell else {
+            return UICollectionViewCell()
+        }
+        cell.audioTitle.text = self.audioLabel[indexPath.item]
+        cell.audioSub.text = self.audioSubLabel[indexPath.item]
+        
+        return cell
+        
     }
     
 
-    /*
-    // MARK: - Navigation
+    
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }
