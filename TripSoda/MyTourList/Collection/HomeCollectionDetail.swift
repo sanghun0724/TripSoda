@@ -21,9 +21,21 @@ class HomeCollectionDetail: UIViewController,UICollectionViewDataSource,UICollec
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        flowLayoutDetail()
         
     }
     
+    func flowLayoutDetail() {
+        let collectionViewLayout:UICollectionViewFlowLayout = {
+            let layout = UICollectionViewFlowLayout()
+            layout.itemSize = CGSize(width: 414 , height: 136 )
+            layout.minimumLineSpacing = 10
+            layout.sectionInset = UIEdgeInsets.zero
+            layout.scrollDirection = .vertical
+            return layout
+        }()
+        collectionView.collectionViewLayout = collectionViewLayout
+    }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return placeSquence.count
@@ -32,8 +44,10 @@ class HomeCollectionDetail: UIViewController,UICollectionViewDataSource,UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell:HomeCollectionDetailCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? HomeCollectionDetailCell else {
             return UICollectionViewCell()
-            
         }
+        cell.squeceTime.text = self.placeTime[indexPath.item]
+        cell.squenceLabel.text = self.placeSquence[indexPath.item]
+        
         return cell
     }
    

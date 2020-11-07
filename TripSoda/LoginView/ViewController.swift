@@ -27,7 +27,7 @@ class ViewController: UIViewController,LoginButtonDelegate {
             guard let nextView = nextViewController else {
                 return
             }
-            
+            nextView.modalPresentationStyle = .fullScreen
             self.present(nextView, animated: true, completion: nil)
         }
         
@@ -62,7 +62,8 @@ class ViewController: UIViewController,LoginButtonDelegate {
                 return
             }
             
-            self.navigationController?.pushViewController(nextView, animated: true)
+            nextView.modalPresentationStyle = .fullScreen
+            self.present(nextView, animated: true, completion: nil)
         })
     }
     

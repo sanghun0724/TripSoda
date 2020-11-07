@@ -43,6 +43,9 @@ class HomeViewController:UIViewController,UICollectionViewDelegate,UICollectionV
             
         }
     }
+    @IBAction func backButton(_sender:Any) {
+        self.performSegue(withIdentifier: "back", sender: self)
+    }
     
     @IBAction func menuItem(_ sender:Any) {
         dropDown.dataSource = ["투어날짜 임박순","투어날짜 시작순"]
@@ -91,7 +94,17 @@ class HomeViewController:UIViewController,UICollectionViewDelegate,UICollectionV
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "more" {
+            guard let nextController:HomeCollectionDetail = segue.destination as? HomeCollectionDetail else {
+                return
+            }
+            guard let cell:HomeCollectionCell = sender as? HomeCollectionCell else {
+                return
+            }
+            guard let index:IndexPath = self.collectionView.indexPath(for: cell) else {
+                return
+            }
             
+            nextController.selectIndex = index.item
         }
     }
 }

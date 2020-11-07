@@ -18,6 +18,8 @@
 		B67AB6E525541FEA005C9BD3 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AB6E425541FEA005C9BD3 /* UserInformation.swift */; };
 		B67AB6E8255421BD005C9BD3 /* wrongNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AB6E7255421BD005C9BD3 /* wrongNumber.swift */; };
 		B67AB6EF2554281A005C9BD3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AB6EE2554281A005C9BD3 /* HomeViewController.swift */; };
+		B685E6132556982900C14ED2 /* TourDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685E6122556982900C14ED2 /* TourDetailController.swift */; };
+		B685E61625569C0E00C14ED2 /* audioMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685E61525569C0E00C14ED2 /* audioMain.swift */; };
 		B6B1FF0025559C7600911530 /* HomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1FEFF25559C7600911530 /* HomeCollectionCell.swift */; };
 		B6B1FF062555A10200911530 /* HomeCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1FF052555A10200911530 /* HomeCellData.swift */; };
 		B6B1FF0E2555E11A00911530 /* HomeCollectionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1FF0D2555E11A00911530 /* HomeCollectionDetail.swift */; };
@@ -39,6 +41,8 @@
 		B67AB6E425541FEA005C9BD3 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 		B67AB6E7255421BD005C9BD3 /* wrongNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wrongNumber.swift; sourceTree = "<group>"; };
 		B67AB6EE2554281A005C9BD3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B685E6122556982900C14ED2 /* TourDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourDetailController.swift; sourceTree = "<group>"; };
+		B685E61525569C0E00C14ED2 /* audioMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = audioMain.swift; sourceTree = "<group>"; };
 		B6B1FEFF25559C7600911530 /* HomeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
 		B6B1FF052555A10200911530 /* HomeCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellData.swift; sourceTree = "<group>"; };
 		B6B1FF0D2555E11A00911530 /* HomeCollectionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionDetail.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 		B67AB6C825540E3A005C9BD3 /* TripSoda */ = {
 			isa = PBXGroup;
 			children = (
+				B685E611255697FE00C14ED2 /* TourDetail */,
 				B6B1FEFE25559B4500911530 /* MyTourList */,
 				B6B1FEFD25559B3600911530 /* Model */,
 				B67AB6C925540E3A005C9BD3 /* AppDelegate.swift */,
@@ -107,6 +112,24 @@
 				B67AB6D725540E3A005C9BD3 /* Info.plist */,
 			);
 			path = TripSoda;
+			sourceTree = "<group>";
+		};
+		B685E611255697FE00C14ED2 /* TourDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B685E6122556982900C14ED2 /* TourDetailController.swift */,
+				B685E61525569C0E00C14ED2 /* audioMain.swift */,
+			);
+			path = TourDetail;
+			sourceTree = "<group>";
+		};
+		B699F584255660300007F34F /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				B6B1FF0D2555E11A00911530 /* HomeCollectionDetail.swift */,
+				B67AB6EE2554281A005C9BD3 /* HomeViewController.swift */,
+			);
+			path = Collection;
 			sourceTree = "<group>";
 		};
 		B6B1FEFC25559AFD00911530 /* LoginView */ = {
@@ -131,9 +154,8 @@
 		B6B1FEFE25559B4500911530 /* MyTourList */ = {
 			isa = PBXGroup;
 			children = (
+				B699F584255660300007F34F /* Collection */,
 				B6B1FF102555E47100911530 /* cell */,
-				B67AB6EE2554281A005C9BD3 /* HomeViewController.swift */,
-				B6B1FF0D2555E11A00911530 /* HomeCollectionDetail.swift */,
 			);
 			path = MyTourList;
 			sourceTree = "<group>";
@@ -263,7 +285,9 @@
 			files = (
 				B6B1FF0025559C7600911530 /* HomeCollectionCell.swift in Sources */,
 				B67AB6E525541FEA005C9BD3 /* UserInformation.swift in Sources */,
+				B685E6132556982900C14ED2 /* TourDetailController.swift in Sources */,
 				B6B1FF062555A10200911530 /* HomeCellData.swift in Sources */,
+				B685E61625569C0E00C14ED2 /* audioMain.swift in Sources */,
 				B67AB6CE25540E3A005C9BD3 /* ViewController.swift in Sources */,
 				B67AB6E8255421BD005C9BD3 /* wrongNumber.swift in Sources */,
 				B67AB6E0255417FC005C9BD3 /* BuyingCodeViewController.swift in Sources */,
