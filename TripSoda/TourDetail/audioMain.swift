@@ -18,6 +18,7 @@ class audioMain: UIViewController,AVAudioPlayerDelegate {
     @IBOutlet var progressSlider: UISlider!
     @IBOutlet var collectionView:UICollectionView!
     
+    
     let collectionDatasource = audioMainCollection()
     
     override func viewDidLoad() {
@@ -29,10 +30,19 @@ class audioMain: UIViewController,AVAudioPlayerDelegate {
         collectionView.delegate = collectionDatasource
         collectionView.dataSource = collectionDatasource
         UIDesine()
+        self.tabBarController?.tabBar.isHidden = true 
         collectionView.reloadData()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func backButton(_ sender:Any) {
+        guard let next = self.storyboard?.instantiateViewController(withIdentifier: "scroll") else {
+            return
+        }
+       
         self.navigationController?.popViewController(animated: true)
     }
     

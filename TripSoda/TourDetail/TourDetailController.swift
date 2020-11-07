@@ -19,12 +19,13 @@ class TourDetailController: UIViewController {
     
     
     @IBAction func audioButton(_ sender:Any) {
-        guard let next = self.storyboard?.instantiateViewController(withIdentifier: "audio") else {
-            return
-        }
-        next.modalPresentationStyle = .fullScreen
-        self.present(next, animated: true, completion: nil)
-    }
+//        guard let next = self.storyboard?.instantiateViewController(withIdentifier: "audio") else {
+//            return
+//        }
+//        self.navigationController?.pushViewController(next, animated: true)
+//
+        
+   }
 
    
 
