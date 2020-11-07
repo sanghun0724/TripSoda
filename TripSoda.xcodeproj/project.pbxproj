@@ -20,6 +20,8 @@
 		B67AB6EF2554281A005C9BD3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AB6EE2554281A005C9BD3 /* HomeViewController.swift */; };
 		B685E6132556982900C14ED2 /* TourDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685E6122556982900C14ED2 /* TourDetailController.swift */; };
 		B685E61625569C0E00C14ED2 /* audioMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685E61525569C0E00C14ED2 /* audioMain.swift */; };
+		B685E61C2556B76100C14ED2 /* audioMainCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685E61B2556B76100C14ED2 /* audioMainCollection.swift */; };
+		B685E61F2556B77400C14ED2 /* audioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685E61E2556B77400C14ED2 /* audioCell.swift */; };
 		B6B1FF0025559C7600911530 /* HomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1FEFF25559C7600911530 /* HomeCollectionCell.swift */; };
 		B6B1FF062555A10200911530 /* HomeCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1FF052555A10200911530 /* HomeCellData.swift */; };
 		B6B1FF0E2555E11A00911530 /* HomeCollectionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1FF0D2555E11A00911530 /* HomeCollectionDetail.swift */; };
@@ -43,6 +45,8 @@
 		B67AB6EE2554281A005C9BD3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B685E6122556982900C14ED2 /* TourDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourDetailController.swift; sourceTree = "<group>"; };
 		B685E61525569C0E00C14ED2 /* audioMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = audioMain.swift; sourceTree = "<group>"; };
+		B685E61B2556B76100C14ED2 /* audioMainCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = audioMainCollection.swift; sourceTree = "<group>"; };
+		B685E61E2556B77400C14ED2 /* audioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = audioCell.swift; sourceTree = "<group>"; };
 		B6B1FEFF25559C7600911530 /* HomeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
 		B6B1FF052555A10200911530 /* HomeCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellData.swift; sourceTree = "<group>"; };
 		B6B1FF0D2555E11A00911530 /* HomeCollectionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionDetail.swift; sourceTree = "<group>"; };
@@ -117,10 +121,20 @@
 		B685E611255697FE00C14ED2 /* TourDetail */ = {
 			isa = PBXGroup;
 			children = (
+				B685E6212556B77800C14ED2 /* audioCollection */,
 				B685E6122556982900C14ED2 /* TourDetailController.swift */,
 				B685E61525569C0E00C14ED2 /* audioMain.swift */,
 			);
 			path = TourDetail;
+			sourceTree = "<group>";
+		};
+		B685E6212556B77800C14ED2 /* audioCollection */ = {
+			isa = PBXGroup;
+			children = (
+				B685E61E2556B77400C14ED2 /* audioCell.swift */,
+				B685E61B2556B76100C14ED2 /* audioMainCollection.swift */,
+			);
+			path = audioCollection;
 			sourceTree = "<group>";
 		};
 		B699F584255660300007F34F /* Collection */ = {
@@ -286,6 +300,8 @@
 				B6B1FF0025559C7600911530 /* HomeCollectionCell.swift in Sources */,
 				B67AB6E525541FEA005C9BD3 /* UserInformation.swift in Sources */,
 				B685E6132556982900C14ED2 /* TourDetailController.swift in Sources */,
+				B685E61F2556B77400C14ED2 /* audioCell.swift in Sources */,
+				B685E61C2556B76100C14ED2 /* audioMainCollection.swift in Sources */,
 				B6B1FF062555A10200911530 /* HomeCellData.swift in Sources */,
 				B685E61625569C0E00C14ED2 /* audioMain.swift in Sources */,
 				B67AB6CE25540E3A005C9BD3 /* ViewController.swift in Sources */,
