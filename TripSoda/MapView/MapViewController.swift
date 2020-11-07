@@ -25,6 +25,12 @@ class MapViewController: UIViewController ,CLLocationManagerDelegate{
         myMap.showsUserLocation = true
     }
     
+    @IBAction func location(_sender:Any) {
+        locationManager.startUpdatingLocation()
+        myMap.showsUserLocation = true 
+    }
+    
+    
     // 위도와 경도, 스팬(영역 폭)을 입력받아 지도에 표시
         func goLocation(latitudeValue: CLLocationDegrees,
                         longtudeValue: CLLocationDegrees,
