@@ -23,6 +23,16 @@ class HomeViewController:UIViewController,UICollectionViewDelegate,UICollectionV
     
     @IBOutlet weak var collectionView:UICollectionView!
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        self.tabBarController?.tabBar.layer.masksToBounds = true
+               self.tabBarController?.tabBar.isTranslucent = true
+               self.tabBarController?.tabBar.barStyle = .default
+               self.tabBarController?.tabBar.layer.cornerRadius = 30
+               self.tabBarController?.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -27,6 +27,7 @@
 		B6B1FF062555A10200911530 /* HomeCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1FF052555A10200911530 /* HomeCellData.swift */; };
 		B6B1FF0E2555E11A00911530 /* HomeCollectionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1FF0D2555E11A00911530 /* HomeCollectionDetail.swift */; };
 		B6B1FF122555E49200911530 /* HomeCollectionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1FF112555E49200911530 /* HomeCollectionDetailCell.swift */; };
+		B6EBBB1825590F75004A8DB0 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EBBB1725590F75004A8DB0 /* TabbarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		B6B1FF052555A10200911530 /* HomeCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellData.swift; sourceTree = "<group>"; };
 		B6B1FF0D2555E11A00911530 /* HomeCollectionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionDetail.swift; sourceTree = "<group>"; };
 		B6B1FF112555E49200911530 /* HomeCollectionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionDetailCell.swift; sourceTree = "<group>"; };
+		B6EBBB1725590F75004A8DB0 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		FADCE8F945E1247194E9DC1C /* Pods-TripSoda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripSoda.release.xcconfig"; path = "Target Support Files/Pods-TripSoda/Pods-TripSoda.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 		B67AB6BD25540E3A005C9BD3 = {
 			isa = PBXGroup;
 			children = (
+				B6EBBB1725590F75004A8DB0 /* TabbarController.swift */,
 				B67AB6C825540E3A005C9BD3 /* TripSoda */,
 				B67AB6C725540E3A005C9BD3 /* Products */,
 				30DA69B326C5283E3077DEA1 /* Pods */,
@@ -324,6 +327,7 @@
 				B67AB6CC25540E3A005C9BD3 /* SceneDelegate.swift in Sources */,
 				B6B1FF0E2555E11A00911530 /* HomeCollectionDetail.swift in Sources */,
 				B685E6242556EA3A00C14ED2 /* MapViewController.swift in Sources */,
+				B6EBBB1825590F75004A8DB0 /* TabbarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

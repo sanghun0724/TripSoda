@@ -143,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="2546" y="78"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tapbar Controller-->
         <scene sceneID="ACt-ZV-D5J">
             <objects>
-                <tabBarController storyboardIdentifier="tapbar" id="x8D-c5-Z6I" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tapbar" id="x8D-c5-Z6I" customClass="TapbarController" customModule="TripSoda" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="fNn-hK-hYz"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XH6-vv-QND">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -815,6 +815,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="e4Q-nv-9JB"/>
         <segue reference="E3D-rv-KBy"/>
     </inferredMetricsTieBreakers>
     <resources>
