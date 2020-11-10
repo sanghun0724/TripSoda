@@ -6,6 +6,7 @@ target 'TripSoda' do
   use_frameworks!
 pod 'FBSDKLoginKit'
 pod 'DropDown'
+pod 'VBRRollingPit'
   # Pods for TripSoda
 
 end

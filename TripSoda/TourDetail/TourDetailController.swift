@@ -13,7 +13,7 @@ class TourDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      
+        self.tabBarItem.title = nil 
     }
     
     

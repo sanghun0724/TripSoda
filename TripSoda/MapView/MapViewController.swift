@@ -12,6 +12,7 @@ import DropDown
 class MapViewController: UIViewController ,CLLocationManagerDelegate{
 
     @IBOutlet var myMap:MKMapView!
+    @IBOutlet var musicView:UIView!
     
     let locationManager = CLLocationManager()
     
@@ -24,11 +25,16 @@ class MapViewController: UIViewController ,CLLocationManagerDelegate{
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         myMap.showsUserLocation = true
+        
+        musicView.layer.masksToBounds = true // 지정크기를 넘어가면 자르기
+        musicView.layer.cornerRadius = 30
     }
     
     @IBAction func location(_sender:Any) {
         locationManager.startUpdatingLocation()
-        myMap.showsUserLocation = true 
+        myMap.showsUserLocation = true
+        
+        self.tabBarItem.title = nil
     }
     
     

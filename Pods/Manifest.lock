@@ -10,22 +10,26 @@ PODS:
     - FBSDKLoginKit/Login (= 8.1.0)
   - FBSDKLoginKit/Login (8.1.0):
     - FBSDKCoreKit (~> 8.1.0)
+  - VBRRollingPit (1.0.1)
 
 DEPENDENCIES:
   - DropDown
   - FBSDKLoginKit
+  - VBRRollingPit
 
 SPEC REPOS:
   trunk:
     - DropDown
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - VBRRollingPit
 
 SPEC CHECKSUMS:
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   FBSDKCoreKit: b3ca27e124dae67122d3bb47c8f96800b39986a6
   FBSDKLoginKit: a3a92ba9380759cd0c1aa8319465fb5f2857c602
+  VBRRollingPit: 62a79cc663aeea6a196878b3a907056617f96b6a
 
-PODFILE CHECKSUM: ce6995c6f850dadf14da3ab4772f62991b8a4abd
+PODFILE CHECKSUM: 5968e100d88211e80af83b1d6e37a1a49d418e7d
 
 COCOAPODS: 1.10.0
