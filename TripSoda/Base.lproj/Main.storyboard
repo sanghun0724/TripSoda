@@ -304,7 +304,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3JF-zR-chG">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3JF-zR-chG">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
@@ -336,7 +336,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="NMF-U9-soj"/>
                     <navigationItem key="navigationItem" id="y5Y-DS-KnQ"/>
                     <connections>
-                        <outlet property="musicView" destination="QAG-eg-Bft" id="JqH-fo-WeR"/>
+                        <outlet property="musicView" destination="QAG-eg-Bft" id="jyn-mF-a6N"/>
                         <outlet property="myMap" destination="3JF-zR-chG" id="TaG-nL-QxW"/>
                     </connections>
                 </viewController>

@@ -41,11 +41,11 @@ class MapViewController: UIViewController ,CLLocationManagerDelegate{
         
         myMap.userTrackingMode = .follow
         
-        //메뉴바 //네비게이션바 씹..
-        //        musicView.layer.masksToBounds = true // 지정크기를 넘어가면 자르기
-        //        musicView.layer.cornerRadius = 25
-        //        musicView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        //
+       // 메뉴바 //네비게이션바 씹..
+                musicView.layer.masksToBounds = true // 지정크기를 넘어가면 자르기
+                musicView.layer.cornerRadius = 25
+                musicView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
         //        let myView = UIView(frame: navigationController?.navigationBar.frame ?? .zero)
         //        navigationController?.navigationBar.topItem?.titleView = myView
         //        myView.backgroundColor = .red
