@@ -13,8 +13,10 @@ class MapViewController: UIViewController ,CLLocationManagerDelegate{
 
     @IBOutlet var myMap:MKMapView!
     @IBOutlet var musicView:UIView!
+    @IBOutlet var DrogdownView:UIView!
     
     let locationManager = CLLocationManager()
+    let dropDown = DropDown()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,17 @@ class MapViewController: UIViewController ,CLLocationManagerDelegate{
         
         musicView.layer.masksToBounds = true // 지정크기를 넘어가면 자르기
         musicView.layer.cornerRadius = 30
+        
+        DrogdownView = UIView(frame: navigationController?.navigationBar.frame ?? .zero)
+        guard let topMenu = navigationController?.navigationBar.topItem?.rightBarButtonItem else {
+            return
+        }
+        dropDown.anchorView = topMenu
+    }
+    
+    @IBAction func menuItem(_ sender:Any) {
+        dropDown.dataSource = ["영월역","고씨동굴"]
+        dropDown.show()
     }
     
     @IBAction func location(_sender:Any) {
