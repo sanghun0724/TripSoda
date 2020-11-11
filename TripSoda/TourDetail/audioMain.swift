@@ -41,11 +41,7 @@ class audioMain: UIViewController,AVAudioPlayerDelegate {
     }
     
     @IBAction func backButton(_ sender:Any) {
-        guard let next = self.storyboard?.instantiateViewController(withIdentifier: "scroll") else {
-            return
-        }
-       
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     func UIDesine() {

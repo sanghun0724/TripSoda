@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AD6EB245868D16C883F712DC /* Pods_TripSoda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EF441BF30503E1AA48E225 /* Pods_TripSoda.framework */; };
+		B672B829255C452700603BD2 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B672B828255C452700603BD2 /* PopupViewController.swift */; };
 		B67AB6CA25540E3A005C9BD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AB6C925540E3A005C9BD3 /* AppDelegate.swift */; };
 		B67AB6CC25540E3A005C9BD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AB6CB25540E3A005C9BD3 /* SceneDelegate.swift */; };
 		B67AB6CE25540E3A005C9BD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AB6CD25540E3A005C9BD3 /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		2D8D496B23B0279FA594E709 /* Pods-TripSoda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripSoda.debug.xcconfig"; path = "Target Support Files/Pods-TripSoda/Pods-TripSoda.debug.xcconfig"; sourceTree = "<group>"; };
 		60EF441BF30503E1AA48E225 /* Pods_TripSoda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripSoda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B672B828255C452700603BD2 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		B67AB6C625540E3A005C9BD3 /* TripSoda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripSoda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67AB6C925540E3A005C9BD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B67AB6CB25540E3A005C9BD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				B685E6232556EA3A00C14ED2 /* MapViewController.swift */,
+				B672B828255C452700603BD2 /* PopupViewController.swift */,
 			);
 			path = MapView;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				B685E6132556982900C14ED2 /* TourDetailController.swift in Sources */,
 				B685E61F2556B77400C14ED2 /* audioCell.swift in Sources */,
 				B685E61C2556B76100C14ED2 /* audioMainCollection.swift in Sources */,
+				B672B829255C452700603BD2 /* PopupViewController.swift in Sources */,
 				B6B1FF062555A10200911530 /* HomeCellData.swift in Sources */,
 				B685E61625569C0E00C14ED2 /* audioMain.swift in Sources */,
 				B67AB6CE25540E3A005C9BD3 /* ViewController.swift in Sources */,
