@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TEST: UIViewController {
+class TEST: UINavigationController{
 
     override func viewWillAppear(_ animated: Bool) {
        
@@ -15,7 +15,12 @@ class TEST: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        guard let next = self.storyboard?.instantiateViewController(identifier: "chat") else {
+            return
+        }
+        
+        
+        self.pushViewController(next, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -23,12 +28,7 @@ class TEST: UIViewController {
     }
 
     @IBAction func RR() {
-        guard let next = self.storyboard?.instantiateViewController(identifier: "chat") else {
-            return
-        }
-        let nav = UINavigationController(rootViewController:self)
-        (UIApplication.shared.delegate as! AppDelegate).window!.rootViewController = nav
-        self.navigationController!.pushViewController(next, animated: true)
+        
         // Do any additional setup after loading the view.
     }
     /*

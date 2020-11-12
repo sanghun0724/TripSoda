@@ -1058,10 +1058,10 @@
             </objects>
             <point key="canvasLocation" x="5715.9420289855079" y="2863.3928571428569"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--TEST-->
         <scene sceneID="qOt-wF-hql">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8h4-gD-Nmo" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="kkk" automaticallyAdjustsScrollViewInsets="NO" id="8h4-gD-Nmo" customClass="TEST" customModule="TripSoda" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ejv-He-LW5">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
