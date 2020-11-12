@@ -37,7 +37,7 @@ class MessagerViewController: UIViewController,UITableViewDataSource,UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        guard let next = self.storyboard?.instantiateViewController(identifier: "chat") else {
+        guard let next = self.storyboard?.instantiateViewController(identifier: "through") else {
             return
         }
         

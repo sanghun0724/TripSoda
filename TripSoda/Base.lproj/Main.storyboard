@@ -356,7 +356,7 @@
         <!--Item-->
         <scene sceneID="jmd-XK-iMr">
             <objects>
-                <viewController id="zLh-Ke-1vi" customClass="MessageViewController" customModule="TripSoda" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zLh-Ke-1vi" customClass="MessagerViewController" customModule="TripSoda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xgg-l8-5AB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -471,12 +471,38 @@
                     <tabBarItem key="tabBarItem" title="Item" id="oGd-7V-csc"/>
                     <navigationItem key="navigationItem" id="clU-FG-1TV"/>
                     <connections>
-                        <outlet property="tableView" destination="x0p-1t-XfP" id="Y8y-xA-RdU"/>
+                        <outlet property="tableView" destination="x0p-1t-XfP" id="fjx-4s-0Bt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jyi-yA-0Fb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6928.985507246377" y="2147.5446428571427"/>
+        </scene>
+        <!--TEST-->
+        <scene sceneID="yM7-L4-XuC">
+            <objects>
+                <viewController storyboardIdentifier="through" id="EXG-AM-1di" customClass="TEST" customModule="TripSoda" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tDK-k6-aTH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDf-Jp-nab">
+                                <rect key="frame" x="184" y="347" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="RR" destination="EXG-AM-1di" eventType="touchUpInside" id="0lo-VW-ljI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fAm-X0-tPh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UCr-Og-wqd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RBS-Aw-LeK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9660.8695652173919" y="2584.8214285714284"/>
         </scene>
         <!--Item-->
         <scene sceneID="uey-yg-Vf3">
@@ -500,11 +526,11 @@
             <objects>
                 <viewController id="zyA-8Z-WVR" customClass="HomeCollectionDetail" customModule="TripSoda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VdZ-aP-EDt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tNz-i4-sCP">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FT5-8C-3zR">
                                     <size key="itemSize" width="414" height="136"/>
@@ -998,21 +1024,21 @@
             </objects>
             <point key="canvasLocation" x="6626.0869565217399" y="2863.3928571428569"/>
         </scene>
-        <!--메세지-->
+        <!--Message Chat View Controller-->
         <scene sceneID="NhZ-Vp-f4A">
             <objects>
-                <viewController storyboardIdentifier="chat" id="3oG-kz-JD1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chat" id="3oG-kz-JD1" customClass="MessageChatViewController" customModule="TripSoda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="asJ-So-Gsl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="qqi-dC-wgE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="메세지" id="WvZ-My-Rej"/>
+                    <navigationItem key="navigationItem" id="0HB-eu-Coa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6oz-XJ-XEr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8902.898550724638" y="2740.8482142857142"/>
+            <point key="canvasLocation" x="13453.623188405798" y="2740.8482142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8de-Tn-3we">
@@ -1031,6 +1057,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j9c-uL-GPJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5715.9420289855079" y="2863.3928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qOt-wF-hql">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8h4-gD-Nmo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ejv-He-LW5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EXG-AM-1di" kind="relationship" relationship="rootViewController" id="HYu-E6-qdo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btH-51-jTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8750.7246376811599" y="2584.8214285714284"/>
         </scene>
     </scenes>
     <designables>

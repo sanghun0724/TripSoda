@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AD6EB245868D16C883F712DC /* Pods_TripSoda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EF441BF30503E1AA48E225 /* Pods_TripSoda.framework */; };
+		B60D972E255D3AAF0053DC30 /* TEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60D972D255D3AAF0053DC30 /* TEST.swift */; };
 		B672B829255C452700603BD2 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B672B828255C452700603BD2 /* PopupViewController.swift */; };
 		B67AB6CA25540E3A005C9BD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AB6C925540E3A005C9BD3 /* AppDelegate.swift */; };
 		B67AB6CC25540E3A005C9BD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AB6CB25540E3A005C9BD3 /* SceneDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		2D8D496B23B0279FA594E709 /* Pods-TripSoda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripSoda.debug.xcconfig"; path = "Target Support Files/Pods-TripSoda/Pods-TripSoda.debug.xcconfig"; sourceTree = "<group>"; };
 		60EF441BF30503E1AA48E225 /* Pods_TripSoda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripSoda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B60D972D255D3AAF0053DC30 /* TEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEST.swift; sourceTree = "<group>"; };
 		B672B828255C452700603BD2 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		B67AB6C625540E3A005C9BD3 /* TripSoda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripSoda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67AB6C925540E3A005C9BD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				B69C6655255CFCE400D09DB1 /* MessagerViewController.swift */,
 				B69C6658255D063B00D09DB1 /* MessageChatViewController.swift */,
 				B69C665B255D0EB300D09DB1 /* MessageViewCell.swift */,
+				B60D972D255D3AAF0053DC30 /* TEST.swift */,
 			);
 			path = MessageView;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				B6B1FF062555A10200911530 /* HomeCellData.swift in Sources */,
 				B685E61625569C0E00C14ED2 /* audioMain.swift in Sources */,
 				B67AB6CE25540E3A005C9BD3 /* ViewController.swift in Sources */,
+				B60D972E255D3AAF0053DC30 /* TEST.swift in Sources */,
 				B67AB6E8255421BD005C9BD3 /* wrongNumber.swift in Sources */,
 				B67AB6E0255417FC005C9BD3 /* BuyingCodeViewController.swift in Sources */,
 				B6B1FF122555E49200911530 /* HomeCollectionDetailCell.swift in Sources */,

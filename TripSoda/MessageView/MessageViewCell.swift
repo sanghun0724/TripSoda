@@ -7,23 +7,11 @@
 
 import UIKit
 
-class MessageViewCell: UIViewController {
+class MessageViewCell: UITableViewCell {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet var profileImgae:UIImageView!
+    @IBOutlet var profileLabel:UILabel!
+    @IBOutlet var messageLabel:UILabel!
 
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
