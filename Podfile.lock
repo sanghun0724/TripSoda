@@ -10,11 +10,17 @@ PODS:
     - FBSDKLoginKit/Login (= 8.1.0)
   - FBSDKLoginKit/Login (8.1.0):
     - FBSDKCoreKit (~> 8.1.0)
+  - InputBarAccessoryView (5.2.1):
+    - InputBarAccessoryView/Core (= 5.2.1)
+  - InputBarAccessoryView/Core (5.2.1)
+  - MessageKit (3.4.2):
+    - InputBarAccessoryView (~> 5.2.1)
   - VBRRollingPit (1.0.1)
 
 DEPENDENCIES:
   - DropDown
   - FBSDKLoginKit
+  - MessageKit
   - VBRRollingPit
 
 SPEC REPOS:
@@ -22,14 +28,18 @@ SPEC REPOS:
     - DropDown
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - InputBarAccessoryView
+    - MessageKit
     - VBRRollingPit
 
 SPEC CHECKSUMS:
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   FBSDKCoreKit: b3ca27e124dae67122d3bb47c8f96800b39986a6
   FBSDKLoginKit: a3a92ba9380759cd0c1aa8319465fb5f2857c602
+  InputBarAccessoryView: 39a7ed22727baf3b8550ecdf6c8a4d28b2c6aa91
+  MessageKit: 5ff0908bce5a7b6e11bd0b60e13a33e03697d161
   VBRRollingPit: 62a79cc663aeea6a196878b3a907056617f96b6a
 
-PODFILE CHECKSUM: 5968e100d88211e80af83b1d6e37a1a49d418e7d
+PODFILE CHECKSUM: f3289c3e43448fc1896f70ce59de6b833244e104
 
 COCOAPODS: 1.10.0

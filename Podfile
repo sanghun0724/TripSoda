@@ -7,6 +7,7 @@ target 'TripSoda' do
 pod 'FBSDKLoginKit'
 pod 'DropDown'
 pod 'VBRRollingPit'
+pod 'MessageKit'
   # Pods for TripSoda
 
 end

@@ -24,6 +24,7 @@
 		B685E61C2556B76100C14ED2 /* audioMainCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685E61B2556B76100C14ED2 /* audioMainCollection.swift */; };
 		B685E61F2556B77400C14ED2 /* audioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685E61E2556B77400C14ED2 /* audioCell.swift */; };
 		B685E6242556EA3A00C14ED2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685E6232556EA3A00C14ED2 /* MapViewController.swift */; };
+		B69C6656255CFCE400D09DB1 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C6655255CFCE400D09DB1 /* MessageViewController.swift */; };
 		B6B1FF0025559C7600911530 /* HomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1FEFF25559C7600911530 /* HomeCollectionCell.swift */; };
 		B6B1FF062555A10200911530 /* HomeCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1FF052555A10200911530 /* HomeCellData.swift */; };
 		B6B1FF0E2555E11A00911530 /* HomeCollectionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1FF0D2555E11A00911530 /* HomeCollectionDetail.swift */; };
@@ -52,6 +53,7 @@
 		B685E61B2556B76100C14ED2 /* audioMainCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = audioMainCollection.swift; sourceTree = "<group>"; };
 		B685E61E2556B77400C14ED2 /* audioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = audioCell.swift; sourceTree = "<group>"; };
 		B685E6232556EA3A00C14ED2 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B69C6655255CFCE400D09DB1 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		B6B1FEFF25559C7600911530 /* HomeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
 		B6B1FF052555A10200911530 /* HomeCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellData.swift; sourceTree = "<group>"; };
 		B6B1FF0D2555E11A00911530 /* HomeCollectionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionDetail.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		B67AB6C825540E3A005C9BD3 /* TripSoda */ = {
 			isa = PBXGroup;
 			children = (
+				B69C6654255CFCA400D09DB1 /* MessageView */,
 				B685E6262556EAC800C14ED2 /* MapView */,
 				B685E611255697FE00C14ED2 /* TourDetail */,
 				B6B1FEFE25559B4500911530 /* MyTourList */,
@@ -161,6 +164,14 @@
 				B67AB6EE2554281A005C9BD3 /* HomeViewController.swift */,
 			);
 			path = Collection;
+			sourceTree = "<group>";
+		};
+		B69C6654255CFCA400D09DB1 /* MessageView */ = {
+			isa = PBXGroup;
+			children = (
+				B69C6655255CFCE400D09DB1 /* MessageViewController.swift */,
+			);
+			path = MessageView;
 			sourceTree = "<group>";
 		};
 		B6B1FEFC25559AFD00911530 /* LoginView */ = {
@@ -328,6 +339,7 @@
 				B6B1FF122555E49200911530 /* HomeCollectionDetailCell.swift in Sources */,
 				B67AB6CA25540E3A005C9BD3 /* AppDelegate.swift in Sources */,
 				B67AB6EF2554281A005C9BD3 /* HomeViewController.swift in Sources */,
+				B69C6656255CFCE400D09DB1 /* MessageViewController.swift in Sources */,
 				B67AB6CC25540E3A005C9BD3 /* SceneDelegate.swift in Sources */,
 				B6B1FF0E2555E11A00911530 /* HomeCollectionDetail.swift in Sources */,
 				B685E6242556EA3A00C14ED2 /* MapViewController.swift in Sources */,
