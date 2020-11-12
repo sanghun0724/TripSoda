@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MessageViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class MessagerViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
 
     @IBOutlet var tableView:UITableView!
@@ -25,8 +25,12 @@ class MessageViewController: UIViewController,UITableViewDataSource,UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "testMesaage"
+        guard let cell:MessageViewCell = tableView.dequeueReusableCell(withIdentifier: "profilcell", for: indexPath) as? MessageViewCell else {
+            return UITableViewCell()
+        }
+        cell.profileLabel.text = "김산순(다음일정:1건)"
+        cell.messageLabel.text = "ㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+
         return cell
     }
     
