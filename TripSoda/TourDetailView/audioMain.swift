@@ -32,7 +32,7 @@ class audioMain: UIViewController,AVAudioPlayerDelegate {
         collectionView.delegate = collectionDatasource
         collectionView.dataSource = collectionDatasource
         UIDesine()
-        self.tabBarController?.tabBar.isHidden = true 
+        
         collectionView.reloadData()
     }
     
