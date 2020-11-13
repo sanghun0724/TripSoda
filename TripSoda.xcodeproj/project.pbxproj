@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AD6EB245868D16C883F712DC /* Pods_TripSoda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EF441BF30503E1AA48E225 /* Pods_TripSoda.framework */; };
 		B60D972E255D3AAF0053DC30 /* TEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60D972D255D3AAF0053DC30 /* TEST.swift */; };
+		B65EDD39255EC48500369BEC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65EDD38255EC48500369BEC /* SettingViewController.swift */; };
+		B65EDD3D255ED25100369BEC /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65EDD3C255ED25100369BEC /* NoticeViewController.swift */; };
 		B672B829255C452700603BD2 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B672B828255C452700603BD2 /* PopupViewController.swift */; };
 		B67AB6CA25540E3A005C9BD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AB6C925540E3A005C9BD3 /* AppDelegate.swift */; };
 		B67AB6CC25540E3A005C9BD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AB6CB25540E3A005C9BD3 /* SceneDelegate.swift */; };
@@ -39,6 +41,8 @@
 		2D8D496B23B0279FA594E709 /* Pods-TripSoda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripSoda.debug.xcconfig"; path = "Target Support Files/Pods-TripSoda/Pods-TripSoda.debug.xcconfig"; sourceTree = "<group>"; };
 		60EF441BF30503E1AA48E225 /* Pods_TripSoda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripSoda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60D972D255D3AAF0053DC30 /* TEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEST.swift; sourceTree = "<group>"; };
+		B65EDD38255EC48500369BEC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B65EDD3C255ED25100369BEC /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		B672B828255C452700603BD2 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		B67AB6C625540E3A005C9BD3 /* TripSoda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripSoda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67AB6C925540E3A005C9BD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B65EDD37255EC46900369BEC /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				B65EDD38255EC48500369BEC /* SettingViewController.swift */,
+				B65EDD3C255ED25100369BEC /* NoticeViewController.swift */,
+			);
+			path = SettingView;
+			sourceTree = "<group>";
+		};
 		B67AB6BD25540E3A005C9BD3 = {
 			isa = PBXGroup;
 			children = (
@@ -119,10 +132,11 @@
 		B67AB6C825540E3A005C9BD3 /* TripSoda */ = {
 			isa = PBXGroup;
 			children = (
+				B65EDD37255EC46900369BEC /* SettingView */,
 				B69C6654255CFCA400D09DB1 /* MessageView */,
 				B685E6262556EAC800C14ED2 /* MapView */,
-				B685E611255697FE00C14ED2 /* TourDetail */,
-				B6B1FEFE25559B4500911530 /* MyTourList */,
+				B685E611255697FE00C14ED2 /* TourDetailView */,
+				B6B1FEFE25559B4500911530 /* firstTourListView */,
 				B6B1FEFD25559B3600911530 /* Model */,
 				B67AB6C925540E3A005C9BD3 /* AppDelegate.swift */,
 				B6B1FEFC25559AFD00911530 /* LoginView */,
@@ -135,14 +149,14 @@
 			path = TripSoda;
 			sourceTree = "<group>";
 		};
-		B685E611255697FE00C14ED2 /* TourDetail */ = {
+		B685E611255697FE00C14ED2 /* TourDetailView */ = {
 			isa = PBXGroup;
 			children = (
 				B685E6212556B77800C14ED2 /* audioCollection */,
 				B685E6122556982900C14ED2 /* TourDetailController.swift */,
 				B685E61525569C0E00C14ED2 /* audioMain.swift */,
 			);
-			path = TourDetail;
+			path = TourDetailView;
 			sourceTree = "<group>";
 		};
 		B685E6212556B77800C14ED2 /* audioCollection */ = {
@@ -202,13 +216,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		B6B1FEFE25559B4500911530 /* MyTourList */ = {
+		B6B1FEFE25559B4500911530 /* firstTourListView */ = {
 			isa = PBXGroup;
 			children = (
 				B699F584255660300007F34F /* Collection */,
 				B6B1FF102555E47100911530 /* cell */,
 			);
-			path = MyTourList;
+			path = firstTourListView;
 			sourceTree = "<group>";
 		};
 		B6B1FF102555E47100911530 /* cell */ = {
@@ -352,9 +366,11 @@
 				B67AB6CA25540E3A005C9BD3 /* AppDelegate.swift in Sources */,
 				B67AB6EF2554281A005C9BD3 /* HomeViewController.swift in Sources */,
 				B69C6656255CFCE400D09DB1 /* MessagerViewController.swift in Sources */,
+				B65EDD39255EC48500369BEC /* SettingViewController.swift in Sources */,
 				B67AB6CC25540E3A005C9BD3 /* SceneDelegate.swift in Sources */,
 				B6B1FF0E2555E11A00911530 /* HomeCollectionDetail.swift in Sources */,
 				B685E6242556EA3A00C14ED2 /* MapViewController.swift in Sources */,
+				B65EDD3D255ED25100369BEC /* NoticeViewController.swift in Sources */,
 				B6EBBB1825590F75004A8DB0 /* TabbarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

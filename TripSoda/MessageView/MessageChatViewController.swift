@@ -22,6 +22,7 @@ struct Message:MessageType {
 
 class MessageChatViewController: MessagesViewController,MessagesDataSource, MessagesLayoutDelegate,MessagesDisplayDelegate {
     
+    var TESTViewDelegate = TEST()
     
     let currentUser = Sender(senderId: "self", displayName: "나")
     
@@ -44,7 +45,7 @@ class MessageChatViewController: MessagesViewController,MessagesDataSource, Mess
         messages.append(Message(sender: otherUser, messageId: "4", sentDate: Date().addingTimeInterval(-54600), kind: .text(";;;;;;;;;;;;;;;")))
         messages.append(Message(sender: currentUser, messageId: "5", sentDate: Date().addingTimeInterval(-44600), kind: .text("안녕하세여어어어")))
         messages.append(Message(sender: otherUser, messageId: "6", sentDate: Date().addingTimeInterval(-34600), kind: .text("안녕하세여어어어")))
-        messages.append(Message(sender: currentUser, messageId: "7", sentDate: Date().addingTimeInterval(-24600), kind: .text("안녕하세여어어어")))
+        messages.append(Message(sender: currentUser, messageId: "7", sentDate: Date().addingTimeInterval(-24600), kind: .text("ㅋㅋㅋㅋㅋㅋㅋㅋㅋ")))
         
         
         messagesCollectionView.messagesDataSource = self
@@ -53,9 +54,9 @@ class MessageChatViewController: MessagesViewController,MessagesDataSource, Mess
        
     }
     
-    override func viewDidLayoutSubviews() {
-        self.messagesCollectionView.contentInset = UIEdgeInsets(top: 70, left: 0, bottom: 70, right: 0)
-    }
+//    override func viewDidLayoutSubviews() {
+//        self.messagesCollectionView.contentInset = UIEdgeInsets(top: 70, left: 0, bottom: 70, right: 0)
+//    }
     func currentSender() -> SenderType {
         return currentUser
     }
@@ -67,9 +68,19 @@ class MessageChatViewController: MessagesViewController,MessagesDataSource, Mess
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
         return messages.count
     }
-    
-    
+   
+    override func viewWillDisappear(_ animated: Bool) {
+        if self.navigationController?.viewControllers.firstIndex(of: self) == nil {
+            CATransaction.begin()
+            CATransaction.setCompletionBlock {
+                self.TESTViewDelegate.dismiss(animated: true, completion: nil)
+            }
+            CATransaction.commit()
+            
+            }
 
+            super.viewWillDisappear(animated)
+    }
     
     
     

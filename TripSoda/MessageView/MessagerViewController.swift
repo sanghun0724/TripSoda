@@ -8,7 +8,7 @@
 import UIKit
 
 class MessagerViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
-    
+    var testViewDelegate = TEST()
 
     @IBOutlet var tableView:UITableView!
     
@@ -41,9 +41,13 @@ class MessagerViewController: UIViewController,UITableViewDataSource,UITableView
             return
         }
         
-        next.modalPresentationStyle = .fullScreen
+        CATransaction.begin()
+//        next.modalPresentationStyle = .fullScreen
         self.present(next, animated: true, completion: nil)
-        
+        CATransaction.setCompletionBlock {
+            self.testViewDelegate.moveTochat()
+        }
+        CATransaction.commit()
     }
-
+    
 }

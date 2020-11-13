@@ -8,29 +8,35 @@
 import UIKit
 
 class TEST: UINavigationController{
-
+   
     override func viewWillAppear(_ animated: Bool) {
-       
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let massageChatViewDelegate = MessageChatViewController()
+        let MssagerViewDelegate = MessagerViewController()
+        massageChatViewDelegate.TESTViewDelegate = self
+        MssagerViewDelegate.testViewDelegate = self
+        
+    }
+    
+    func moveTochat() {
         guard let next = self.storyboard?.instantiateViewController(identifier: "chat") else {
             return
         }
-        
-        
         self.pushViewController(next, animated: true)
     }
+    
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         
     }
 
-    @IBAction func RR() {
-        
-        // Do any additional setup after loading the view.
-    }
+    
+    
     /*
     // MARK: - Navigation
 
