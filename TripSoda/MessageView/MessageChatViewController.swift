@@ -22,7 +22,7 @@ struct Message:MessageType {
 
 class MessageChatViewController: MessagesViewController,MessagesDataSource, MessagesLayoutDelegate,MessagesDisplayDelegate {
     
-    var TESTViewDelegate = TEST()
+    @IBOutlet var fooView:UIView!
     
     let currentUser = Sender(senderId: "self", displayName: "나")
     
@@ -68,20 +68,11 @@ class MessageChatViewController: MessagesViewController,MessagesDataSource, Mess
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
         return messages.count
     }
-   
-    override func viewWillDisappear(_ animated: Bool) {
-        if self.navigationController?.viewControllers.firstIndex(of: self) == nil {
-            CATransaction.begin()
-            CATransaction.setCompletionBlock {
-                self.TESTViewDelegate.dismiss(animated: true, completion: nil)
-            }
-            CATransaction.commit()
-            
-            }
-
-            super.viewWillDisappear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.messagesCollectionView.contentInset = UIEdgeInsets(top: 200, left: 0, bottom: 0, right: 0)
     }
-    
+   
     
     
    

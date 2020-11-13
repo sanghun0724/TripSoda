@@ -8,17 +8,23 @@
 import UIKit
 
 class TEST: UINavigationController{
-   
+     
+    var chatDelegate = MessageChatViewController()
+    
     override func viewWillAppear(_ animated: Bool) {
+        if self.isBeingPresented == true {
+            moveTochat()
+        }
+        else if  chatDelegate.isMovingFromParent {
+            print ("@@@@@@@@@@@@@@@@@@살려줘어어어")
+            self.dismiss(animated: true , completion: nil)
+        }
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let massageChatViewDelegate = MessageChatViewController()
-        let MssagerViewDelegate = MessagerViewController()
-        massageChatViewDelegate.TESTViewDelegate = self
-        MssagerViewDelegate.testViewDelegate = self
+       
         
     }
     

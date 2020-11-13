@@ -8,7 +8,6 @@
 import UIKit
 
 class MessagerViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
-    var testViewDelegate = TEST()
 
     @IBOutlet var tableView:UITableView!
     
@@ -37,17 +36,11 @@ class MessagerViewController: UIViewController,UITableViewDataSource,UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        guard let next = self.storyboard?.instantiateViewController(identifier: "kkk") else {
+        guard let next = self.storyboard?.instantiateViewController(identifier: "chat") else {
             return
         }
-        
-        CATransaction.begin()
-//        next.modalPresentationStyle = .fullScreen
+        next.modalPresentationStyle = .fullScreen
         self.present(next, animated: true, completion: nil)
-        CATransaction.setCompletionBlock {
-            self.testViewDelegate.moveTochat()
-        }
-        CATransaction.commit()
     }
     
 }
