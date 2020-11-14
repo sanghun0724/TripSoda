@@ -70,10 +70,10 @@ class MessageChatViewController: MessagesViewController,MessagesDataSource, Mess
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.messagesCollectionView.contentInset = UIEdgeInsets(top: 200, left: 0, bottom: 0, right: 0)
+        self.becomeFirstResponder()
     }
-   
     
+   
     
    
     

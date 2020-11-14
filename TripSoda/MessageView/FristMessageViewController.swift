@@ -1,18 +1,21 @@
 //
-//  NoticeViewController.swift
+//  FristMessageViewController.swift
 //  TripSoda
 //
-//  Created by sangheon on 2020/11/13.
+//  Created by sangheon on 2020/11/14.
 //
 
 import UIKit
 
-class NoticeViewController: UIViewController {
+class FristMessageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    @IBAction func backButton() {
+        self.dismiss(animated: true, completion: nil)
     }
     
 

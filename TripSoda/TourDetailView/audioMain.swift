@@ -26,8 +26,8 @@ class audioMain: UIViewController,AVAudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        playPauseButton.setImage(UIImage(named: "button_play"), for: UIControl.State.normal)
-        playPauseButton.setImage(UIImage(named: "button_pause"), for: UIControl.State.selected)
+        playPauseButton.setImage(UIImage(named:"button_play" ), for: UIControl.State.normal)
+        playPauseButton.setImage(UIImage(named: "images"), for: UIControl.State.selected)
         initializePlayer()
         collectionView.delegate = collectionDatasource
         collectionView.dataSource = collectionDatasource

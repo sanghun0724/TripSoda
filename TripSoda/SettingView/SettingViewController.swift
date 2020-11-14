@@ -16,14 +16,34 @@ class SettingViewController:UITableViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func handleSwich(_ sender:UISwitch) {
+        if sender.isOn {
+            print("d")
+        } else {
+            print("dq")
+        }
     }
-    */
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        switch indexPath.row {
+        case 0:
+            guard let noti = storyboard?.instantiateViewController(withIdentifier: "noti") else {
+                return
+            }
+            self.navigationController?.pushViewController(noti, animated: true)
+        case 1:
+            print("언어")
+        case 2:
+            print("이용약관")
+        case 3:
+            print("마케팅 수신동의")
+        case 4:
+            print("Push알림동의")
+        case 5:
+            
+        default:
+            print("something wrong")
+        }
+    }
 }
