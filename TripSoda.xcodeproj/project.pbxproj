@@ -35,6 +35,7 @@
 		B6B1FF0E2555E11A00911530 /* HomeCollectionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1FF0D2555E11A00911530 /* HomeCollectionDetail.swift */; };
 		B6B1FF122555E49200911530 /* HomeCollectionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1FF112555E49200911530 /* HomeCollectionDetailCell.swift */; };
 		B6E3E2CF255FB94E004AD8C2 /* FristMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3E2CE255FB94E004AD8C2 /* FristMessageViewController.swift */; };
+		B6E3E2D225600011004AD8C2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3E2D125600011004AD8C2 /* ProfileViewController.swift */; };
 		B6EBBB1825590F75004A8DB0 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EBBB1725590F75004A8DB0 /* TabbarController.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		B6B1FF0D2555E11A00911530 /* HomeCollectionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionDetail.swift; sourceTree = "<group>"; };
 		B6B1FF112555E49200911530 /* HomeCollectionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionDetailCell.swift; sourceTree = "<group>"; };
 		B6E3E2CE255FB94E004AD8C2 /* FristMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FristMessageViewController.swift; sourceTree = "<group>"; };
+		B6E3E2D125600011004AD8C2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B6EBBB1725590F75004A8DB0 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		FADCE8F945E1247194E9DC1C /* Pods-TripSoda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripSoda.release.xcconfig"; path = "Target Support Files/Pods-TripSoda/Pods-TripSoda.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,6 +198,7 @@
 				B69C665B255D0EB300D09DB1 /* MessageViewCell.swift */,
 				B60D972D255D3AAF0053DC30 /* TEST.swift */,
 				B6E3E2CE255FB94E004AD8C2 /* FristMessageViewController.swift */,
+				B6E3E2D125600011004AD8C2 /* ProfileViewController.swift */,
 			);
 			path = MessageView;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				B69C6659255D063B00D09DB1 /* MessageChatViewController.swift in Sources */,
 				B6B1FF062555A10200911530 /* HomeCellData.swift in Sources */,
 				B685E61625569C0E00C14ED2 /* audioMain.swift in Sources */,
+				B6E3E2D225600011004AD8C2 /* ProfileViewController.swift in Sources */,
 				B67AB6CE25540E3A005C9BD3 /* ViewController.swift in Sources */,
 				B60D972E255D3AAF0053DC30 /* TEST.swift in Sources */,
 				B67AB6E8255421BD005C9BD3 /* wrongNumber.swift in Sources */,

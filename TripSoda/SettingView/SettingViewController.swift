@@ -41,7 +41,12 @@ class SettingViewController:UITableViewController {
         case 4:
             print("Push알림동의")
         case 5:
-            
+            self.performSegue(withIdentifier: "unwind", sender: self)
+        case 6:
+            guard let ask = storyboard?.instantiateViewController(withIdentifier: "ask") else {
+                return
+            }
+            self.navigationController?.pushViewController(ask, animated: true)
         default:
             print("something wrong")
         }

@@ -79,4 +79,8 @@ class ViewController: UIViewController,LoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
         
     }
+    
+    @IBAction func preparForunwind(sender:UIStoryboardSegue) {
+        
+    }
 }

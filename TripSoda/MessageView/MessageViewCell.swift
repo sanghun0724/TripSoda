@@ -9,7 +9,7 @@ import UIKit
 
 class MessageViewCell: UITableViewCell {
 
-    @IBOutlet var profileImgae:UIImageView!
+    
     @IBOutlet var profileLabel:UILabel!
     @IBOutlet var messageLabel:UILabel!
 

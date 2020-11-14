@@ -395,6 +395,9 @@
                                                         <constraint firstAttribute="width" constant="94" id="eXO-Tp-8Pa"/>
                                                     </constraints>
                                                     <state key="normal" backgroundImage="person.fill" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="buttonImage" destination="zLh-Ke-1vi" eventType="touchUpInside" id="K0N-nE-X3M"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -895,8 +898,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="9RW-1h-86F"/>
+                    <connections>
+                        <segue destination="Ufs-XV-Ybk" kind="unwind" identifier="unwind" unwindAction="preparForunwindWithSender:" id="o9h-pq-BSH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zqv-vC-IAU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Ufs-XV-Ybk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="8259" y="2056"/>
         </scene>
@@ -1338,10 +1345,10 @@
             </objects>
             <point key="canvasLocation" x="6626.0869565217399" y="2863.3928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="wpf-HD-kKe">
             <objects>
-                <viewController id="jEz-hr-NSc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profile" id="jEz-hr-NSc" customClass="ProfileViewController" customModule="TripSoda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dPx-45-waa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1350,14 +1357,20 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="gMB-Ts-0Vq"/>
+                                    <navigationItem title="상세정보" id="gMB-Ts-0Vq">
+                                        <barButtonItem key="leftBarButtonItem" image="arrow.backward" catalog="system" id="eue-o6-E3f">
+                                            <connections>
+                                                <action selector="backButton" destination="jEz-hr-NSc" id="Qct-fs-MHX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bd3-zG-Jqq">
                                 <rect key="frame" x="20" y="120" width="374" height="337"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zwb-M6-RTr">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zwb-M6-RTr">
                                         <rect key="frame" x="112" y="75" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -1453,11 +1466,17 @@
                                 <rect key="frame" x="360" y="693" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="message.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="semdMessage" destination="jEz-hr-NSc" eventType="touchUpInside" id="h1t-a4-Z0c"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiz-xv-wsG">
                                 <rect key="frame" x="307" y="693" width="20" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="phone.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="phonCall" destination="jEz-hr-NSc" eventType="touchUpInside" id="F2d-hg-u9p"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gTH-Ue-3xu"/>
