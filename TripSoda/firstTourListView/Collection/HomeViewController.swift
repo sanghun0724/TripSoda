@@ -50,10 +50,10 @@ class HomeViewController:UIViewController,UICollectionViewDelegate,UICollectionV
                 //체크표시하려면 여기에 나눠서 그떄그떄 cell 추가 해서 이미지보여주는 방법
                 //추후에
             }
-            self.tabBarItem.title = nil
+            
         }
-       
-        tabBarItem.imageInsets = UIEdgeInsets(top: -25, left: -15, bottom: 0, right: -15)
+        
+        
         
     }
     @IBAction func backButton(_sender:Any) {
