@@ -71,9 +71,10 @@ class MessageChatViewController: MessagesViewController,MessagesDataSource, Mess
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.becomeFirstResponder()
+        
     }
     
-   
+
     
    
     
