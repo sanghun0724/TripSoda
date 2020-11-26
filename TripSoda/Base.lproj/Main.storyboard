@@ -167,23 +167,27 @@
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                                <color key="value" systemColor="systemTealColor"/>
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
                                                 <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="updatedUnderlineColor">
-                                                <color key="value" red="0.81853267248790884" green="1" blue="0.8699439429813296" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="value" red="0.15545531064611792" green="0.80650906735751293" blue="0.0" alpha="0.78705435739436624" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
                                                 <real key="value" value="26"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="secureText" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="needToUpdateUnderlines" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogs-1a-5b4">
                                         <rect key="frame" x="223" y="142" width="39" height="26"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <state key="normal" title="전화문의"/>
+                                        <state key="normal" title="전화문의">
+                                            <color key="titleColor" red="0.15545531060000001" green="0.80650906739999995" blue="0.0" alpha="0.78705435739999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <connections>
                                             <action selector="telePhone" destination="8i0-96-i6M" eventType="touchUpInside" id="rgL-Fr-AQ0"/>
                                         </connections>
@@ -191,7 +195,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbk-XY-tf9">
                                         <rect key="frame" x="270" y="142" width="51" height="26"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <state key="normal" title="이메일 상담"/>
+                                        <state key="normal" title="이메일 상담">
+                                            <color key="titleColor" red="0.15545531060000001" green="0.80650906739999995" blue="0.0" alpha="0.78705435739999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <connections>
                                             <action selector="sendFeedbackButtonTapped:" destination="8i0-96-i6M" eventType="touchUpInside" id="9xU-ZS-tEo"/>
                                         </connections>
@@ -338,18 +344,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill.questionmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="f5c-mw-xl6">
-                                                    <rect key="frame" x="4" y="58.5" width="406" height="170"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mahkeo234401-1" translatesAutoresizingMaskIntoConstraints="NO" id="f5c-mw-xl6">
+                                                    <rect key="frame" x="4" y="58" width="406" height="172"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영월" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIO-jv-a2D">
-                                                    <rect key="frame" x="8" y="8" width="42" height="41"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="42" id="z8b-t1-DHw"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7/9일 오전 9시 출발," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FA-hZ-SiJ">
                                                     <rect key="frame" x="73" y="25" width="96" height="24"/>
                                                     <constraints>
@@ -378,13 +375,22 @@
                                                     <color key="textColor" systemColor="systemGray2Color"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영월" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIO-jv-a2D">
+                                                    <rect key="frame" x="8" y="17" width="42" height="41"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="z8b-t1-DHw"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="f5c-mw-xl6" firstAttribute="leading" secondItem="HpP-8b-iiI" secondAttribute="leading" constant="4" id="35L-bB-blw"/>
                                                 <constraint firstItem="6FA-hZ-SiJ" firstAttribute="leading" secondItem="OIO-jv-a2D" secondAttribute="trailing" constant="23" id="7A7-iU-dQb"/>
                                                 <constraint firstItem="6FA-hZ-SiJ" firstAttribute="top" secondItem="HpP-8b-iiI" secondAttribute="top" constant="25" id="9v1-Xp-4aY"/>
                                                 <constraint firstItem="f5c-mw-xl6" firstAttribute="centerX" secondItem="HpP-8b-iiI" secondAttribute="centerX" id="Dlp-I4-Kjf"/>
-                                                <constraint firstItem="OIO-jv-a2D" firstAttribute="top" secondItem="HpP-8b-iiI" secondAttribute="topMargin" id="Jlc-E6-jtx"/>
+                                                <constraint firstItem="OIO-jv-a2D" firstAttribute="top" secondItem="HpP-8b-iiI" secondAttribute="topMargin" constant="9" id="Jlc-E6-jtx"/>
                                                 <constraint firstItem="0l9-t9-QQA" firstAttribute="baseline" secondItem="bzZ-6y-PEu" secondAttribute="baseline" id="Oi8-ui-WpQ"/>
                                                 <constraint firstItem="OIO-jv-a2D" firstAttribute="leading" secondItem="HpP-8b-iiI" secondAttribute="leadingMargin" id="RMo-bK-Y2Z"/>
                                                 <constraint firstAttribute="bottom" secondItem="f5c-mw-xl6" secondAttribute="bottom" id="Rd2-Tg-M9r"/>
@@ -393,8 +399,8 @@
                                                 <constraint firstItem="6FA-hZ-SiJ" firstAttribute="firstBaseline" secondItem="0l9-t9-QQA" secondAttribute="firstBaseline" id="bxg-yk-qg1"/>
                                                 <constraint firstItem="6FA-hZ-SiJ" firstAttribute="baseline" secondItem="0l9-t9-QQA" secondAttribute="baseline" id="hQf-wq-I3J"/>
                                                 <constraint firstItem="bzZ-6y-PEu" firstAttribute="leading" secondItem="0l9-t9-QQA" secondAttribute="trailing" constant="1" id="qkc-1U-Blt"/>
-                                                <constraint firstItem="OIO-jv-a2D" firstAttribute="bottom" secondItem="6FA-hZ-SiJ" secondAttribute="bottom" id="rhd-j7-Yk4"/>
-                                                <constraint firstItem="f5c-mw-xl6" firstAttribute="top" secondItem="OIO-jv-a2D" secondAttribute="bottom" constant="9" id="zOD-tO-5PM"/>
+                                                <constraint firstItem="OIO-jv-a2D" firstAttribute="bottom" secondItem="6FA-hZ-SiJ" secondAttribute="bottom" constant="9" id="rhd-j7-Yk4"/>
+                                                <constraint firstItem="f5c-mw-xl6" firstAttribute="top" secondItem="OIO-jv-a2D" secondAttribute="bottom" id="zOD-tO-5PM"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="230"/>
@@ -1721,11 +1727,11 @@
         <image name="list.triangle" catalog="system" width="128" height="91"/>
         <image name="location.fill" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="mahkeo234401-1" width="391" height="204"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="person.2" catalog="system" width="128" height="81"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="person.fill.questionmark" catalog="system" width="128" height="104"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <image name="scribble.variable" catalog="system" width="128" height="118"/>
         <image name="x.circle" catalog="system" width="128" height="121"/>
@@ -1760,9 +1766,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

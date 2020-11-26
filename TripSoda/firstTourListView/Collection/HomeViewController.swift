@@ -8,7 +8,7 @@
 import UIKit
 import DropDown
 
-class HomeViewController:UIViewController,UICollectionViewDelegate,UICollectionViewDataSource
+class HomeViewController:TTNavigationBar,UICollectionViewDelegate,UICollectionViewDataSource
 {
     
     var placeTitle = ["영월","창원","서울","고창"]
@@ -24,7 +24,7 @@ class HomeViewController:UIViewController,UICollectionViewDelegate,UICollectionV
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        
+        blur()
         self.tabBarController?.tabBar.layer.masksToBounds = true
                self.tabBarController?.tabBar.isTranslucent = true
                self.tabBarController?.tabBar.barStyle = .default
@@ -34,6 +34,7 @@ class HomeViewController:UIViewController,UICollectionViewDelegate,UICollectionV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         collectionView.delegate = self
         collectionView.dataSource = self 
         flowLayout()

@@ -11,6 +11,7 @@
 		B60D972E255D3AAF0053DC30 /* TEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60D972D255D3AAF0053DC30 /* TEST.swift */; };
 		B65EDD39255EC48500369BEC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65EDD38255EC48500369BEC /* SettingViewController.swift */; };
 		B65EDD3D255ED25100369BEC /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65EDD3C255ED25100369BEC /* NoticeViewController.swift */; };
+		B66B143B257011FB0014A548 /* TTNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B143A257011FB0014A548 /* TTNavigationBar.swift */; };
 		B672B829255C452700603BD2 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B672B828255C452700603BD2 /* PopupViewController.swift */; };
 		B67AB6CA25540E3A005C9BD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AB6C925540E3A005C9BD3 /* AppDelegate.swift */; };
 		B67AB6CC25540E3A005C9BD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AB6CB25540E3A005C9BD3 /* SceneDelegate.swift */; };
@@ -46,6 +47,7 @@
 		B60D972D255D3AAF0053DC30 /* TEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEST.swift; sourceTree = "<group>"; };
 		B65EDD38255EC48500369BEC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B65EDD3C255ED25100369BEC /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
+		B66B143A257011FB0014A548 /* TTNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTNavigationBar.swift; sourceTree = "<group>"; };
 		B672B828255C452700603BD2 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		B67AB6C625540E3A005C9BD3 /* TripSoda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripSoda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67AB6C925540E3A005C9BD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				B6C3B0C4256F859A00777770 /* Font.swift */,
+				B66B143A257011FB0014A548 /* TTNavigationBar.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				B6E3E2D225600011004AD8C2 /* ProfileViewController.swift in Sources */,
 				B67AB6CE25540E3A005C9BD3 /* ViewController.swift in Sources */,
 				B60D972E255D3AAF0053DC30 /* TEST.swift in Sources */,
+				B66B143B257011FB0014A548 /* TTNavigationBar.swift in Sources */,
 				B67AB6E8255421BD005C9BD3 /* wrongNumber.swift in Sources */,
 				B67AB6E0255417FC005C9BD3 /* BuyingCodeViewController.swift in Sources */,
 				B6B1FF122555E49200911530 /* HomeCollectionDetailCell.swift in Sources */,
