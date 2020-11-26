@@ -13,7 +13,6 @@ class HomeViewController:UIViewController,UICollectionViewDelegate,UICollectionV
     
     var placeTitle = ["영월","창원","서울","고창"]
     var reservationTime:[String] = ["7/9일 오전 9시 출발,","7/10일 오전 9시 출발","7/11일 오전 11시 출발","7/12일 오전 12시 출발"]
-    //dictionary로 할걸 그랬다! 아님 튜플?
     var spareDate:[Int] = [2,5,3,1]
     var spareTime:[Int] = [6,3,5,3]
     let cellIdentifier = "homeCell"
@@ -31,7 +30,6 @@ class HomeViewController:UIViewController,UICollectionViewDelegate,UICollectionV
                self.tabBarController?.tabBar.barStyle = .default
                self.tabBarController?.tabBar.layer.cornerRadius = 30
                self.tabBarController?.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        
     }
     
     override func viewDidLoad() {
@@ -50,11 +48,7 @@ class HomeViewController:UIViewController,UICollectionViewDelegate,UICollectionV
                 //체크표시하려면 여기에 나눠서 그떄그떄 cell 추가 해서 이미지보여주는 방법
                 //추후에
             }
-            
         }
-        
-        
-        
     }
     @IBAction func backButton(_sender:Any) {
         self.performSegue(withIdentifier: "back", sender: self)
@@ -71,8 +65,6 @@ class HomeViewController:UIViewController,UICollectionViewDelegate,UICollectionV
         collectionView.reloadData()
     }
     
-    
-    
     func flowLayout() {
         let collectionViewLayout:UICollectionViewFlowLayout = {
             let layout = UICollectionViewFlowLayout()
@@ -84,9 +76,6 @@ class HomeViewController:UIViewController,UICollectionViewDelegate,UICollectionV
         }()
         collectionView.collectionViewLayout = collectionViewLayout
     }
-    
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.spareDate.count

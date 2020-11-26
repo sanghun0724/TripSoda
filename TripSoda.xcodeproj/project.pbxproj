@@ -34,6 +34,7 @@
 		B6B1FF062555A10200911530 /* HomeCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1FF052555A10200911530 /* HomeCellData.swift */; };
 		B6B1FF0E2555E11A00911530 /* HomeCollectionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1FF0D2555E11A00911530 /* HomeCollectionDetail.swift */; };
 		B6B1FF122555E49200911530 /* HomeCollectionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1FF112555E49200911530 /* HomeCollectionDetailCell.swift */; };
+		B6C3B0C5256F859A00777770 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C3B0C4256F859A00777770 /* Font.swift */; };
 		B6E3E2CF255FB94E004AD8C2 /* FristMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3E2CE255FB94E004AD8C2 /* FristMessageViewController.swift */; };
 		B6E3E2D225600011004AD8C2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3E2D125600011004AD8C2 /* ProfileViewController.swift */; };
 		B6EBBB1825590F75004A8DB0 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EBBB1725590F75004A8DB0 /* TabbarController.swift */; };
@@ -70,6 +71,7 @@
 		B6B1FF052555A10200911530 /* HomeCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellData.swift; sourceTree = "<group>"; };
 		B6B1FF0D2555E11A00911530 /* HomeCollectionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionDetail.swift; sourceTree = "<group>"; };
 		B6B1FF112555E49200911530 /* HomeCollectionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionDetailCell.swift; sourceTree = "<group>"; };
+		B6C3B0C4256F859A00777770 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		B6E3E2CE255FB94E004AD8C2 /* FristMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FristMessageViewController.swift; sourceTree = "<group>"; };
 		B6E3E2D125600011004AD8C2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B6EBBB1725590F75004A8DB0 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		B67AB6BD25540E3A005C9BD3 = {
 			isa = PBXGroup;
 			children = (
+				B60D972D255D3AAF0053DC30 /* TEST.swift */,
 				B6EBBB1725590F75004A8DB0 /* TabbarController.swift */,
 				B67AB6C825540E3A005C9BD3 /* TripSoda */,
 				B67AB6C725540E3A005C9BD3 /* Products */,
@@ -136,6 +139,7 @@
 		B67AB6C825540E3A005C9BD3 /* TripSoda */ = {
 			isa = PBXGroup;
 			children = (
+				B6C3B0C3256F858900777770 /* Style */,
 				B65EDD37255EC46900369BEC /* SettingView */,
 				B69C6654255CFCA400D09DB1 /* MessageView */,
 				B685E6262556EAC800C14ED2 /* MapView */,
@@ -196,7 +200,6 @@
 				B69C6655255CFCE400D09DB1 /* MessagerViewController.swift */,
 				B69C6658255D063B00D09DB1 /* MessageChatViewController.swift */,
 				B69C665B255D0EB300D09DB1 /* MessageViewCell.swift */,
-				B60D972D255D3AAF0053DC30 /* TEST.swift */,
 				B6E3E2CE255FB94E004AD8C2 /* FristMessageViewController.swift */,
 				B6E3E2D125600011004AD8C2 /* ProfileViewController.swift */,
 			);
@@ -238,6 +241,14 @@
 				B6B1FF112555E49200911530 /* HomeCollectionDetailCell.swift */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		B6C3B0C3256F858900777770 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				B6C3B0C4256F859A00777770 /* Font.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +388,7 @@
 				B67AB6CC25540E3A005C9BD3 /* SceneDelegate.swift in Sources */,
 				B6B1FF0E2555E11A00911530 /* HomeCollectionDetail.swift in Sources */,
 				B685E6242556EA3A00C14ED2 /* MapViewController.swift in Sources */,
+				B6C3B0C5256F859A00777770 /* Font.swift in Sources */,
 				B65EDD3D255ED25100369BEC /* NoticeViewController.swift in Sources */,
 				B6EBBB1825590F75004A8DB0 /* TabbarController.swift in Sources */,
 				B6E3E2CF255FB94E004AD8C2 /* FristMessageViewController.swift in Sources */,

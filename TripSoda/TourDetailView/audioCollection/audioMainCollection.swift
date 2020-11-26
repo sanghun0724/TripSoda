@@ -13,8 +13,6 @@ class audioMainCollection: NSObject,UICollectionViewDataSource,UICollectionViewD
     let audioSubLabel = ["3개의 오디오 중 첫번째 이야기","3개의 오디오 중 첫번째 이야기","3개의 오디오 중 첫번째 이야기"]
     let cellIdentifier = "audiocell"
     
-    
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         self.audioLabel.count
     }
@@ -27,12 +25,5 @@ class audioMainCollection: NSObject,UICollectionViewDataSource,UICollectionViewD
         cell.audioSub.text = self.audioSubLabel[indexPath.item]
         
         return cell
-        
     }
-    
-
-    
-    
-
-   
 }

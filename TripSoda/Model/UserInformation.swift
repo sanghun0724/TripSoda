@@ -13,7 +13,4 @@ class UserInformation {
     
     var buyingPassword:String?
     
-   
-    
-    
 }

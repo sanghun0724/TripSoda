@@ -22,11 +22,6 @@ class PopupViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        self.dismiss(animated: true, completion: nil)
-//    }
-    
     @IBAction func audioButton() {
                 guard let next = self.storyboard?.instantiateViewController(withIdentifier: "audio") else {
                    return

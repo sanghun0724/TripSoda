@@ -13,8 +13,7 @@ class MapViewController: UIViewController ,CLLocationManagerDelegate,MKMapViewDe
     
     @IBOutlet var myMap:MKMapView!
     @IBOutlet var musicView:UIView!
-    
-    
+
     let locationManager = CLLocationManager()
    
     override func viewDidLoad() {
@@ -81,7 +80,6 @@ class MapViewController: UIViewController ,CLLocationManagerDelegate,MKMapViewDe
         return pLocation
     }
     
-    
     // 특정 위도와 경도에 핀 설치하고 핀에 타이틀과 서브 타이틀의 문자열 표시
     func setAnnotation(latitudeValue: CLLocationDegrees,
                        longitudeValue: CLLocationDegrees,
@@ -94,7 +92,6 @@ class MapViewController: UIViewController ,CLLocationManagerDelegate,MKMapViewDe
         annotation.subtitle = strSubTitle
         myMap.addAnnotation(annotation)
     }
-    
     
     // 위치 정보에서 국가, 지역, 도로를 추출하여 레이블에 표시
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 struct HomeCellData:Codable {
     let tourTitle:String
     let tourTime:Int

@@ -16,8 +16,6 @@ class TourDetailController: UIViewController {
         self.tabBarItem.title = nil 
     }
     
-    
-    
     @IBAction func audioButton(_ sender:Any) {
 //        guard let next = self.storyboard?.instantiateViewController(withIdentifier: "audio") else {
 //            return

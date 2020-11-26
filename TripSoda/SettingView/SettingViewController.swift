@@ -18,9 +18,9 @@ class SettingViewController:UITableViewController {
 
     func handleSwich(_ sender:UISwitch) {
         if sender.isOn {
-            print("d")
+            print("")
         } else {
-            print("dq")
+            print("")
         }
     }
 

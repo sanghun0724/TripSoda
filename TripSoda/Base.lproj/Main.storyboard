@@ -19,25 +19,98 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTF-nb-41v">
-                                <rect key="frame" x="107" y="98" width="200" height="494"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="구매코드 입력"/>
-                                <connections>
-                                    <segue destination="8i0-96-i6M" kind="show" id="ryG-W9-g2f"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QQy-wz-XRI">
+                                <rect key="frame" x="30" y="657.5" width="354" height="116"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7H-ot-uY1">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="48"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tt2-CD-keC">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="로그인">
+                                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Tt2-CD-keC" secondAttribute="trailing" id="6mx-RZ-Bq2"/>
+                                            <constraint firstAttribute="bottom" secondItem="Tt2-CD-keC" secondAttribute="bottom" id="8Ak-fi-SYY"/>
+                                            <constraint firstAttribute="height" constant="48" id="brK-Sl-e3b"/>
+                                            <constraint firstItem="Tt2-CD-keC" firstAttribute="leading" secondItem="G7H-ot-uY1" secondAttribute="leading" id="cBt-ZN-Ppi"/>
+                                            <constraint firstItem="Tt2-CD-keC" firstAttribute="top" secondItem="G7H-ot-uY1" secondAttribute="top" id="p4W-hn-m08"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4v-ce-zgq">
+                                        <rect key="frame" x="0.0" y="68" width="354" height="48"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCJ-Gk-c0z">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="48"/>
+                                                <state key="normal" title="투어코드입력">
+                                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="8i0-96-i6M" kind="show" id="bjK-bY-EXV"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="2vq-03-D78"/>
+                                            <constraint firstAttribute="bottom" secondItem="GCJ-Gk-c0z" secondAttribute="bottom" id="6F7-UI-tMq"/>
+                                            <constraint firstAttribute="trailing" secondItem="GCJ-Gk-c0z" secondAttribute="trailing" id="KeM-Bi-UQT"/>
+                                            <constraint firstItem="GCJ-Gk-c0z" firstAttribute="top" secondItem="r4v-ce-zgq" secondAttribute="top" id="L0W-r1-b8S"/>
+                                            <constraint firstItem="GCJ-Gk-c0z" firstAttribute="leading" secondItem="r4v-ce-zgq" secondAttribute="leading" id="iI9-GJ-C0Z"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRIPSODA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFe-H1-J9G">
+                                <rect key="frame" x="11.5" y="176" width="391.5" height="101.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="85"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xk4-UZ-njG">
+                                <rect key="frame" x="18" y="793.5" width="378" height="38.5"/>
+                                <string key="text"> 본 서비스는 트립소다에서 투어를 구매한 
+고객을 위한 오디오 가이드입니다. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sparkling experience" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRP-6R-iFa">
+                                <rect key="frame" x="132" y="277.5" width="150" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gTF-nb-41v" secondAttribute="trailing" constant="107" id="4gs-vW-ypE"/>
-                            <constraint firstItem="gTF-nb-41v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="CcO-jO-Ydx"/>
-                            <constraint firstItem="gTF-nb-41v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="Ofn-uI-Yz0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gTF-nb-41v" secondAttribute="bottom" constant="270" id="nBK-0k-tSn"/>
+                            <constraint firstItem="sFe-H1-J9G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="132" id="2zB-rg-BKy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QQy-wz-XRI" secondAttribute="trailing" constant="30" id="Apw-J1-QQ7"/>
+                            <constraint firstItem="iRP-6R-iFa" firstAttribute="top" secondItem="sFe-H1-J9G" secondAttribute="bottom" id="Et1-fw-pyh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xk4-UZ-njG" secondAttribute="bottom" constant="30" id="Kpq-f0-TCR"/>
+                            <constraint firstItem="Xk4-UZ-njG" firstAttribute="top" secondItem="QQy-wz-XRI" secondAttribute="bottom" constant="20" id="UFK-6H-0ya"/>
+                            <constraint firstItem="sFe-H1-J9G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aC2-6h-Gqu"/>
+                            <constraint firstItem="iRP-6R-iFa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="baw-cE-2fL"/>
+                            <constraint firstItem="QQy-wz-XRI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="kM5-zL-0FZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xk4-UZ-njG" secondAttribute="trailing" constant="18" id="odz-S5-zxa"/>
+                            <constraint firstItem="Xk4-UZ-njG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="rw5-wD-Pzh"/>
+                            <constraint firstItem="QQy-wz-XRI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xFf-3g-Y5E"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="USE-Lt-nSw"/>
+                    <connections>
+                        <outlet property="codeVIew" destination="r4v-ce-zgq" id="gn7-4o-mJv"/>
+                        <outlet property="content" destination="iRP-6R-iFa" id="Mgv-wg-YeJ"/>
+                        <outlet property="helpLabel" destination="Xk4-UZ-njG" id="WTV-mt-8XX"/>
+                        <outlet property="loginView" destination="G7H-ot-uY1" id="xy0-MN-ul5"/>
+                        <outlet property="tripSoda" destination="sFe-H1-J9G" id="04U-rL-uns"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -567,11 +640,11 @@
             <objects>
                 <viewController id="zyA-8Z-WVR" customClass="HomeCollectionDetail" customModule="TripSoda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VdZ-aP-EDt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tNz-i4-sCP">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FT5-8C-3zR">
                                     <size key="itemSize" width="414" height="136"/>
@@ -1567,6 +1640,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
+        <segue reference="bjK-bY-EXV"/>
         <segue reference="tn0-ID-4Av"/>
         <segue reference="E3D-rv-KBy"/>
     </inferredMetricsTieBreakers>
@@ -1619,6 +1693,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
