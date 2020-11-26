@@ -51,7 +51,7 @@
                                                     <color key="titleColor" systemColor="systemGreenColor"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="8i0-96-i6M" kind="show" id="bjK-bY-EXV"/>
+                                                    <action selector="goNextWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P3f-e3-8rp"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -105,9 +105,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="USE-Lt-nSw"/>
                     <connections>
+                        <outlet property="codeButton" destination="GCJ-Gk-c0z" id="ZZp-pT-SAX"/>
                         <outlet property="codeVIew" destination="r4v-ce-zgq" id="gn7-4o-mJv"/>
                         <outlet property="content" destination="iRP-6R-iFa" id="Mgv-wg-YeJ"/>
                         <outlet property="helpLabel" destination="Xk4-UZ-njG" id="WTV-mt-8XX"/>
+                        <outlet property="loginButton" destination="Tt2-CD-keC" id="QhV-us-JsB"/>
                         <outlet property="loginView" destination="G7H-ot-uY1" id="xy0-MN-ul5"/>
                         <outlet property="tripSoda" destination="sFe-H1-J9G" id="04U-rL-uns"/>
                     </connections>
@@ -137,55 +139,105 @@
         <!--Buying Code View Controller-->
         <scene sceneID="wtj-Mv-Mg0">
             <objects>
-                <viewController id="8i0-96-i6M" customClass="BuyingCodeViewController" customModule="TripSoda" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pinCode" id="8i0-96-i6M" customClass="BuyingCodeViewController" customModule="TripSoda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="11d-fc-UbG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="구매코드 입력" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEm-2y-grp">
-                                <rect key="frame" x="69" y="363" width="276" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="delegate" destination="8i0-96-i6M" id="YJL-SK-AhB"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="구매코드가 기억이 안나세요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ro-5D-yu1">
-                                <rect key="frame" x="69" y="416" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogs-1a-5b4">
-                                <rect key="frame" x="241" y="415" width="39" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="전화문의"/>
-                                <connections>
-                                    <action selector="telePhone" destination="8i0-96-i6M" eventType="touchUpInside" id="rgL-Fr-AQ0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbk-XY-tf9">
-                                <rect key="frame" x="289" y="415" width="51" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="이메일 상담"/>
-                                <connections>
-                                    <action selector="sendFeedbackButtonTapped:" destination="8i0-96-i6M" eventType="touchUpInside" id="9xU-ZS-tEo"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5v-nm-zsU">
+                                <rect key="frame" x="32" y="126" width="350" height="239"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VtM-rF-lgC" customClass="PinCodeTextField" customModule="PinCodeTextField">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="125"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="underlineWidth">
+                                                <real key="value" value="32"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="underlineHSpacing">
+                                                <real key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="underlineVMargin">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="characterLimit">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="underlineHeight">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" systemColor="systemTealColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
+                                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="updatedUnderlineColor">
+                                                <color key="value" red="0.81853267248790884" green="1" blue="0.8699439429813296" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="26"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogs-1a-5b4">
+                                        <rect key="frame" x="223" y="142" width="39" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <state key="normal" title="전화문의"/>
+                                        <connections>
+                                            <action selector="telePhone" destination="8i0-96-i6M" eventType="touchUpInside" id="rgL-Fr-AQ0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbk-XY-tf9">
+                                        <rect key="frame" x="270" y="142" width="51" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <state key="normal" title="이메일 상담"/>
+                                        <connections>
+                                            <action selector="sendFeedbackButtonTapped:" destination="8i0-96-i6M" eventType="touchUpInside" id="9xU-ZS-tEo"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구매코드가 기억이 안나세요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ro-5D-yu1">
+                                        <rect key="frame" x="20" y="145" width="126.5" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="126.5" id="dp2-Og-DWf"/>
+                                            <constraint firstAttribute="height" constant="21" id="eS3-xo-CSr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="7Ro-5D-yu1" firstAttribute="leading" secondItem="Q5v-nm-zsU" secondAttribute="leading" constant="20" id="4w1-da-P8p"/>
+                                    <constraint firstItem="VtM-rF-lgC" firstAttribute="leading" secondItem="Q5v-nm-zsU" secondAttribute="leading" id="CSg-eD-tP3"/>
+                                    <constraint firstAttribute="height" constant="239" id="DlB-VC-5Fh"/>
+                                    <constraint firstItem="Ogs-1a-5b4" firstAttribute="top" secondItem="VtM-rF-lgC" secondAttribute="bottom" constant="22" id="Jkb-Gc-fi8"/>
+                                    <constraint firstItem="7Ro-5D-yu1" firstAttribute="top" secondItem="VtM-rF-lgC" secondAttribute="bottom" constant="20" id="MfJ-Z9-kuC"/>
+                                    <constraint firstItem="VtM-rF-lgC" firstAttribute="top" secondItem="Q5v-nm-zsU" secondAttribute="top" id="Tej-lt-xz3"/>
+                                    <constraint firstItem="7Ro-5D-yu1" firstAttribute="centerY" secondItem="Ogs-1a-5b4" secondAttribute="centerY" id="bUB-Zh-bAe"/>
+                                    <constraint firstItem="7Ro-5D-yu1" firstAttribute="centerY" secondItem="pbk-XY-tf9" secondAttribute="centerY" id="hJc-Lx-m7d"/>
+                                    <constraint firstAttribute="trailing" secondItem="VtM-rF-lgC" secondAttribute="trailing" id="nGa-qw-qOf"/>
+                                    <constraint firstItem="Ogs-1a-5b4" firstAttribute="leading" secondItem="7Ro-5D-yu1" secondAttribute="trailing" constant="76.5" id="pij-bN-goG"/>
+                                    <constraint firstItem="pbk-XY-tf9" firstAttribute="top" secondItem="Ogs-1a-5b4" secondAttribute="top" id="qOI-tM-Vxr"/>
+                                    <constraint firstItem="pbk-XY-tf9" firstAttribute="leading" secondItem="Ogs-1a-5b4" secondAttribute="trailing" constant="8" symbolic="YES" id="rEF-PF-94a"/>
+                                    <constraint firstItem="VtM-rF-lgC" firstAttribute="width" secondItem="Q5v-nm-zsU" secondAttribute="width" id="ufJ-lm-myM"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Ro-5D-yu1" secondAttribute="bottom" constant="73" id="yHT-5g-o8o"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qrt-jW-fFT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qrt-jW-fFT" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Q5v-nm-zsU" secondAttribute="bottom" constant="320" id="2rA-bG-rPF"/>
+                            <constraint firstItem="qrt-jW-fFT" firstAttribute="trailing" secondItem="Q5v-nm-zsU" secondAttribute="trailing" constant="32" id="B4Y-mJ-Ore"/>
+                            <constraint firstItem="Q5v-nm-zsU" firstAttribute="top" secondItem="qrt-jW-fFT" secondAttribute="top" constant="82" id="EnJ-B2-uS8"/>
+                            <constraint firstItem="Q5v-nm-zsU" firstAttribute="leading" secondItem="qrt-jW-fFT" secondAttribute="leading" constant="32" id="N0f-ob-KBw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GCy-AZ-Hsl"/>
                     <connections>
-                        <outlet property="buyingcodeText" destination="YEm-2y-grp" id="Dup-tD-2Pi"/>
+                        <outlet property="buyingcodeText" destination="VtM-rF-lgC" id="oNa-1v-kdN"/>
                         <segue destination="x8D-c5-Z6I" kind="modal" identifier="go" modalPresentationStyle="fullScreen" id="iV3-lH-uXU"/>
                     </connections>
                 </viewController>
@@ -205,6 +257,15 @@
                                 <rect key="frame" x="87" y="343" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yKc-OM-Xxw">
+                                <rect key="frame" x="0.0" y="36" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="wVn-f4-XeV">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.backward" catalog="system" id="Q0O-gD-VXG"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3VM-Gc-7pN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1640,7 +1701,6 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="bjK-bY-EXV"/>
         <segue reference="tn0-ID-4Av"/>
         <segue reference="E3D-rv-KBy"/>
     </inferredMetricsTieBreakers>

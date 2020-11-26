@@ -29,12 +29,12 @@ class ViewController: UIViewController {
         self.view.backgroundColor = .algae
         
         tripSoda.textColor = .white
-        
+        loginButton.setTitleColor(.algae, for: .normal)
+        codeButton.setTitleColor(.algae, for: .normal)
         
         loginView.layer.masksToBounds = true
         loginView.layer.cornerRadius = 13
        
-        
         codeVIew.layer.masksToBounds = true
         codeVIew.layer.cornerRadius = 13
        // codeVIew.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -43,7 +43,12 @@ class ViewController: UIViewController {
     
     
     @IBAction func goNext(sender:UIButton) {
-        
+        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "pinCode")
+        guard let nextView = nextViewController else {
+            return
+        }
+        nextView.modalPresentationStyle = .fullScreen
+        self.present(nextView, animated: true, completion: nil)
     }
     @IBAction func preparForunwind(sender:UIStoryboardSegue) {
         

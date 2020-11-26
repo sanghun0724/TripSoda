@@ -8,6 +8,7 @@ pod 'FBSDKLoginKit'
 pod 'DropDown'
 pod 'VBRRollingPit'
 pod 'MessageKit'
+pod 'PinCodeTextField'
   # Pods for TripSoda
 
 end
