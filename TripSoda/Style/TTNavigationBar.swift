@@ -27,17 +27,19 @@ class TTNavigationBar: UIViewController{
             .foregroundColor: UIColor.systemGray,
             .font: UIFont.systemFont(ofSize: 24, weight: .medium)
         ])
-      let boldText: NSMutableAttributedString =
-        NSMutableAttributedString(string: "", attributes: [
-            .foregroundColor: UIColor.systemGray2,
-        .font: UIFont.systemFont(ofSize: 24, weight: .medium)
-        ])
+//      let boldText: NSMutableAttributedString =
+//        NSMutableAttributedString(string: "", attributes: [
+//            .foregroundColor: UIColor.systemGray2,
+//        .font: UIFont.systemFont(ofSize: 24, weight: .medium)
+//        ])
       
       let naviTitle: NSMutableAttributedString
         = lightText
-      naviTitle.append(boldText)
+//      naviTitle.append(boldText)
       label.attributedText = naviTitle
       
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
       return label
     }
 }

@@ -25,7 +25,7 @@ class HomeViewController:TTNavigationBar,UICollectionViewDelegate,UICollectionVi
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         blur()
-        navigationItem.titleView = attributeTitleView()
+       
         self.tabBarController?.tabBar.layer.masksToBounds = true
                self.tabBarController?.tabBar.isTranslucent = true
                self.tabBarController?.tabBar.barStyle = .default
@@ -35,7 +35,8 @@ class HomeViewController:TTNavigationBar,UICollectionViewDelegate,UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.titleView = attributeTitleView() //titleVIew 코드로 constrant 으로 센터 고정
+        navigationItem.titleView?.center.y
         collectionView.delegate = self
         collectionView.dataSource = self 
         flowLayout()
@@ -51,6 +52,12 @@ class HomeViewController:TTNavigationBar,UICollectionViewDelegate,UICollectionVi
                 //추후에
             }
         }
+        
+        
+       
+
+        
+        
     }
     @IBAction func backButton(_sender:Any) {
         self.performSegue(withIdentifier: "back", sender: self)

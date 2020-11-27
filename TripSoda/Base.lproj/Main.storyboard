@@ -294,10 +294,13 @@
             <objects>
                 <tabBarController storyboardIdentifier="tapbar" id="x8D-c5-Z6I" customClass="TabbarController" customModule="TripSoda" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="fNn-hK-hYz"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XH6-vv-QND" customClass="RollingPitTabBar" customModule="VBRRollingPit">
+                    <tabBar key="tabBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="XH6-vv-QND" customClass="RollingPitTabBar" customModule="VBRRollingPit">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.40797790880000001" green="0.63865065570000001" blue="0.419573009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.40797790880000001" green="0.63865065570000001" blue="0.419573009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="barBackColor">
                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -856,8 +859,10 @@
         <scene sceneID="5dp-Kn-Wf3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="62M-uM-Liy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="home" image="homekit" catalog="system" selectedImage="homekit" id="tXP-1E-s9o">
+                    <tabBarItem key="tabBarItem" title="home" selectedImage="homekit" catalog="system" id="tXP-1E-s9o">
+                        <imageReference key="image" image="homekit" catalog="system" symbolScale="large"/>
                         <inset key="imageInsets" minX="-15" minY="-25" maxX="-15" maxY="0.0"/>
+                        <color key="badgeColor" red="0.40797790880000001" green="0.63865065570000001" blue="0.419573009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ilI-UC-7CV">
@@ -877,7 +882,9 @@
         <scene sceneID="Ucg-0f-HqI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="SgY-os-83y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Shcedule" image="doc.text.fill" catalog="system" selectedImage="doc.text.fill" id="umF-vD-FA2"/>
+                    <tabBarItem key="tabBarItem" title="Shcedule" image="doc.text.fill" catalog="system" selectedImage="doc.text.fill" id="umF-vD-FA2">
+                        <color key="badgeColor" red="0.40797790880000001" green="0.63865065570000001" blue="0.419573009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SPn-iz-wps">
                         <autoresizingMask key="autoresizingMask"/>
@@ -1291,7 +1298,7 @@
                                                         <rect key="frame" x="26" y="10" width="40" height="40"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" red="0.40797790880000001" green="0.63865065570000001" blue="0.419573009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <imageReference key="image" image="headphones" catalog="system" symbolScale="large"/>
+                                                        <imageReference key="image" image="headphones" catalog="system" symbolScale="small"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1365,7 +1372,7 @@
                                                         <rect key="frame" x="26" y="10" width="40" height="40"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" red="0.40797790880000001" green="0.63865065570000001" blue="0.419573009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <imageReference key="image" image="map" catalog="system" symbolScale="large"/>
+                                                        <imageReference key="image" image="map" catalog="system" symbolScale="small"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1387,6 +1394,22 @@
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nd6-N4-qsF">
                                                 <rect key="frame" x="22" y="0.0" width="268" height="48"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="전화번호" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuJ-xA-53i">
+                                                        <rect key="frame" x="0.0" y="0.0" width="42" height="15"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="033-250-4444" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Nm-7e-aOw">
+                                                        <rect key="frame" x="0.0" y="29" width="119" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tL4-hY-cGn">
@@ -1402,7 +1425,7 @@
                                                         <rect key="frame" x="26" y="10" width="40" height="40"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" red="0.40797790880000001" green="0.63865065570000001" blue="0.419573009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <imageReference key="image" image="phone.fill" catalog="system" symbolScale="large"/>
+                                                        <imageReference key="image" image="phone.fill" catalog="system" symbolScale="small"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1415,7 +1438,35 @@
                                     </view>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dRB-II-3Sz">
                                         <rect key="frame" x="0.0" y="180" width="414" height="60"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k3C-j7-OOC">
+                                                <rect key="frame" x="8" y="56" width="306" height="4"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7iP-xV-NC5">
+                                                <rect key="frame" x="11" y="-6" width="303" height="48"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="한줄설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCa-vf-FyD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="42" height="15"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="강원도 영월군 난고 김병연(金炳淵)의 유적지" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Yl-HS-njD">
+                                                        <rect key="frame" x="0.0" y="27" width="303" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="kBo-vh-12I"/>
                                         </constraints>
@@ -1943,9 +1994,6 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -1963,6 +2011,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
