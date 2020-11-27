@@ -20,7 +20,7 @@ class TTNavigationBar: UIViewController{
 
     }
     
-    private func attributeTitleView() -> UIView {
+     func attributeTitleView() -> UIView {
       let label: UILabel = UILabel()
       let lightText: NSMutableAttributedString =
         NSMutableAttributedString(string: "Title", attributes: [

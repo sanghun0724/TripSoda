@@ -7,8 +7,9 @@
 
 import UIKit
 import Foundation
+import VBRRollingPit
 
-class TabbarController: UITabBarController {
+class TabbarController: UITabBarController{
 
     override func viewDidLoad() {
         super.viewDidLoad()

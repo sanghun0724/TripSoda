@@ -88,7 +88,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" red="0.40797790880000001" green="0.63865065570000001" blue="0.419573009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="sFe-H1-J9G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="132" id="2zB-rg-BKy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QQy-wz-XRI" secondAttribute="trailing" constant="30" id="Apw-J1-QQ7"/>
@@ -173,7 +173,7 @@
                                                 <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="updatedUnderlineColor">
-                                                <color key="value" red="0.15545531064611792" green="0.80650906735751293" blue="0.0" alpha="0.78705435739436624" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="value" red="0.40797790880000001" green="0.63865065570000001" blue="0.419573009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
                                                 <real key="value" value="26"/>
@@ -186,7 +186,7 @@
                                         <rect key="frame" x="223" y="142" width="39" height="26"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <state key="normal" title="전화문의">
-                                            <color key="titleColor" red="0.15545531060000001" green="0.80650906739999995" blue="0.0" alpha="0.78705435739999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" red="0.40797790880000001" green="0.63865065570000001" blue="0.419573009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
                                             <action selector="telePhone" destination="8i0-96-i6M" eventType="touchUpInside" id="rgL-Fr-AQ0"/>
@@ -196,7 +196,7 @@
                                         <rect key="frame" x="270" y="142" width="51" height="26"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <state key="normal" title="이메일 상담">
-                                            <color key="titleColor" red="0.15545531060000001" green="0.80650906739999995" blue="0.0" alpha="0.78705435739999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" red="0.40797790880000001" green="0.63865065570000001" blue="0.419573009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
                                             <action selector="sendFeedbackButtonTapped:" destination="8i0-96-i6M" eventType="touchUpInside" id="9xU-ZS-tEo"/>
@@ -303,7 +303,7 @@
                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="circleBackColor">
-                                <color key="value" red="0.15545531060000001" green="0.80650906739999995" blue="0.0" alpha="0.78705435739999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="value" red="0.40797790880000001" green="0.63865065570000001" blue="0.419573009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
@@ -328,7 +328,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AbA-G2-GE6">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WDr-9w-bDi">
                                     <size key="itemSize" width="414" height="230"/>
@@ -425,18 +425,20 @@
                         <constraints>
                             <constraint firstItem="AbA-G2-GE6" firstAttribute="top" secondItem="05y-kk-o8Q" secondAttribute="top" id="L4o-oK-6KZ"/>
                             <constraint firstItem="AbA-G2-GE6" firstAttribute="centerX" secondItem="kUN-dh-pJU" secondAttribute="centerX" id="QzP-BE-HUE"/>
-                            <constraint firstItem="AbA-G2-GE6" firstAttribute="bottom" secondItem="05y-kk-o8Q" secondAttribute="bottom" id="Z3A-Y9-jWp"/>
+                            <constraint firstItem="AbA-G2-GE6" firstAttribute="bottom" secondItem="05y-kk-o8Q" secondAttribute="bottom" constant="83" id="Z3A-Y9-jWp"/>
                             <constraint firstItem="AbA-G2-GE6" firstAttribute="leading" secondItem="05y-kk-o8Q" secondAttribute="leading" id="zjc-uS-yiq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="나의 투어일정" id="2gh-Ma-9m8">
                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="MCC-MV-QkT">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="backButtonWith_sender:" destination="GY1-5Y-9lo" id="l0C-y5-KmU"/>
                                 <segue destination="BYZ-38-t0r" kind="presentation" identifier="back" modalPresentationStyle="fullScreen" id="E3D-rv-KBy"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="list.triangle" catalog="system" id="vXv-WF-3qY">
+                            <color key="tintColor" name="label"/>
                             <connections>
                                 <action selector="menuItem:" destination="GY1-5Y-9lo" id="V0e-uS-w3B"/>
                             </connections>
@@ -723,6 +725,11 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <view key="backgroundView" contentMode="scaleToFill" id="BzJ-fl-AjC">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="detail" id="dq1-GR-7bJ" customClass="HomeCollectionDetailCell" customModule="TripSoda" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
@@ -731,7 +738,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="person.2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bbF-FJ-lEd">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bbF-FJ-lEd">
                                                     <rect key="frame" x="52" y="37" width="354" height="99"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="영월역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="omD-vL-2yi">
@@ -750,6 +757,47 @@
                                                     <color key="textColor" systemColor="systemGray2Color"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="QI9-pn-dC4">
+                                                    <rect key="frame" x="21" y="40" width="8" height="94"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cqg-KN-cdw">
+                                                            <rect key="frame" x="0.0" y="0.0" width="8" height="8"/>
+                                                            <color key="backgroundColor" systemColor="labelColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="8" id="Xtd-pV-XHM"/>
+                                                                <constraint firstAttribute="width" constant="8" id="tw0-Ww-GIn"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1d-dU-xhG">
+                                                            <rect key="frame" x="0.0" y="23" width="8" height="6"/>
+                                                            <color key="backgroundColor" red="0.8474475145" green="0.85832518339999997" blue="0.88235688209999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="6" id="7uN-75-IJb"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Lj-NZ-2kg">
+                                                            <rect key="frame" x="0.0" y="44" width="8" height="6"/>
+                                                            <color key="backgroundColor" red="0.8474475145" green="0.85832518339999997" blue="0.88235688209999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="6" id="CI1-av-8Vn"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bxf-BO-Y29">
+                                                            <rect key="frame" x="0.0" y="65" width="8" height="6"/>
+                                                            <color key="backgroundColor" red="0.8474475145" green="0.85832518339999997" blue="0.88235688209999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="6" id="rC7-aU-PNg"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCs-En-aZ6">
+                                                            <rect key="frame" x="0.0" y="86" width="8" height="8"/>
+                                                            <color key="backgroundColor" systemColor="labelColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="8" id="TE7-Op-aFE"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="zbD-sA-32X" firstAttribute="leading" secondItem="omD-vL-2yi" secondAttribute="trailing" constant="8" id="A25-c4-hCs"/>
@@ -793,7 +841,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edB-rC-8Oo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1478" y="1639"/>
+            <point key="canvasLocation" x="1476.8115942028987" y="1638.6160714285713"/>
         </scene>
         <!--home-->
         <scene sceneID="5dp-Kn-Wf3">
@@ -1730,13 +1778,15 @@
         <image name="mahkeo234401-1" width="391" height="204"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
-        <image name="person.2" catalog="system" width="128" height="81"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <image name="scribble.variable" catalog="system" width="128" height="118"/>
         <image name="x.circle" catalog="system" width="128" height="121"/>
         <image name="xmark.rectangle" catalog="system" width="128" height="93"/>
         <image name="다운로드" width="750" height="570"/>
+        <namedColor name="label">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
         <namedColor name="typingIndicatorDot">
             <color red="0.68199998140335083" green="0.68199998140335083" blue="0.69800001382827759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

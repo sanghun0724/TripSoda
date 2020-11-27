@@ -25,6 +25,7 @@ class HomeViewController:TTNavigationBar,UICollectionViewDelegate,UICollectionVi
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         blur()
+        navigationItem.titleView = attributeTitleView()
         self.tabBarController?.tabBar.layer.masksToBounds = true
                self.tabBarController?.tabBar.isTranslucent = true
                self.tabBarController?.tabBar.barStyle = .default
