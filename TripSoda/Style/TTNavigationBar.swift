@@ -23,14 +23,14 @@ class TTNavigationBar: UIViewController{
      func attributeTitleView() -> UIView {
       let label: UILabel = UILabel()
       let lightText: NSMutableAttributedString =
-        NSMutableAttributedString(string: "Title", attributes: [
-        .foregroundColor: UIColor.systemIndigo,
-        .font: UIFont.systemFont(ofSize: 18, weight: .light)
+        NSMutableAttributedString(string: "나의 투어일정", attributes: [
+            .foregroundColor: UIColor.systemGray,
+            .font: UIFont.systemFont(ofSize: 24, weight: .medium)
         ])
       let boldText: NSMutableAttributedString =
-        NSMutableAttributedString(string: "Font", attributes: [
-        .foregroundColor: UIColor.systemBlue,
-        .font: UIFont.systemFont(ofSize: 20, weight: .medium)
+        NSMutableAttributedString(string: "", attributes: [
+            .foregroundColor: UIColor.systemGray2,
+        .font: UIFont.systemFont(ofSize: 24, weight: .medium)
         ])
       
       let naviTitle: NSMutableAttributedString
