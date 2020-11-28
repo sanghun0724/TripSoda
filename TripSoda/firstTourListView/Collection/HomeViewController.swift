@@ -11,6 +11,7 @@ import DropDown
 class HomeViewController:TTNavigationBar,UICollectionViewDelegate,UICollectionViewDataSource
 {
     
+    let imageFile = ["sample1","sample2","sample3","sample1",]
     var placeTitle = ["영월","창원","서울","고창"]
     var reservationTime:[String] = ["7/9일 오전 9시 출발,","7/10일 오전 9시 출발","7/11일 오전 11시 출발","7/12일 오전 12시 출발"]
     var spareDate:[Int] = [2,5,3,1]
@@ -36,7 +37,7 @@ class HomeViewController:TTNavigationBar,UICollectionViewDelegate,UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.titleView = attributeTitleView() //titleVIew 코드로 constrant 으로 센터 고정
-        navigationItem.titleView?.center.y
+        
         collectionView.delegate = self
         collectionView.dataSource = self 
         flowLayout()
@@ -99,6 +100,7 @@ class HomeViewController:TTNavigationBar,UICollectionViewDelegate,UICollectionVi
         cell.tourTime.text = reservationTime[indexPath.item]
         cell.restTime.text = "(\(spareTime[indexPath.item])시간)"
         cell.restDate.text = "\(spareDate[indexPath.item])일"
+        cell.viewPhoto.image = UIImage(named: imageFile[indexPath.item])
         
         return cell
     }

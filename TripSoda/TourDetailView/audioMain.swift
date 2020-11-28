@@ -13,6 +13,8 @@ class audioMain: UIViewController,AVAudioPlayerDelegate {
     var player: AVAudioPlayer!
     var timer: Timer!
     
+    @IBOutlet var decoTopView:UIView!
+    @IBOutlet var decoMusicView:UIView!
     @IBOutlet var playPauseButton: UIButton!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var progressSlider: UISlider!
@@ -25,9 +27,10 @@ class audioMain: UIViewController,AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        playPauseButton.setImage(UIImage(named:"button_play" ), for: UIControl.State.normal)
-        playPauseButton.setImage(UIImage(named: "images"), for: UIControl.State.selected)
+        self.decoTopView.layer.cornerRadius = 25
+        self.decoMusicView.layer.cornerRadius = 25
+        playPauseButton.setImage(UIImage(named:"play.fill" ), for: UIControl.State.normal)
+        playPauseButton.setImage(UIImage(named:"pause.fill"), for: UIControl.State.selected)
         initializePlayer()
         collectionView.delegate = collectionDatasource
         collectionView.dataSource = collectionDatasource
@@ -81,7 +84,7 @@ class audioMain: UIViewController,AVAudioPlayerDelegate {
         let second: Int = Int(time.truncatingRemainder(dividingBy: 60))
         let milisecond: Int = Int(time.truncatingRemainder(dividingBy: 1) * 100)
         
-        let timeText: String = String(format: "%02ld:%02ld:%02ld", minute, second, milisecond)
+        let timeText: String = String(format: "%02ld:%02ld", minute, second, milisecond)
         
         self.timeLabel.text = timeText
     }
