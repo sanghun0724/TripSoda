@@ -10,10 +10,16 @@ import UIKit
 class MessagerViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     @IBOutlet var tableView:UITableView!
+    @IBOutlet var searchView:UIView!
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchView.layer.shadowColor = UIColor.systemGray.cgColor
+        searchView.layer.shadowOpacity = 0.5
+        searchView.layer.shadowRadius = 3
+        searchView.layer.shadowOffset = (CGSize(width: 0, height: 3))
         tableView.dataSource = self
         tableView.delegate = self
         // Do any additional setup after loading the view.
@@ -27,7 +33,7 @@ class MessagerViewController: UIViewController,UITableViewDataSource,UITableView
         guard let cell:MessageViewCell = tableView.dequeueReusableCell(withIdentifier: "profilcell", for: indexPath) as? MessageViewCell else {
             return UITableViewCell()
         }
-        cell.profileLabel.text = "김산순(다음일정:1건)"
+        //cell.profileLabel.text = "김산순(다음일정:1건)"
         cell.messageLabel.text = "ㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
         
         return cell

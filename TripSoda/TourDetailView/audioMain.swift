@@ -29,8 +29,8 @@ class audioMain: UIViewController,AVAudioPlayerDelegate {
         super.viewDidLoad()
         self.decoTopView.layer.cornerRadius = 25
         self.decoMusicView.layer.cornerRadius = 25
-        playPauseButton.setImage(UIImage(named:"play.fill" ), for: UIControl.State.normal)
-        playPauseButton.setImage(UIImage(named:"pause.fill"), for: UIControl.State.selected)
+        playPauseButton.setImage(UIImage(named:"play-button" ), for: UIControl.State.normal)
+        playPauseButton.setImage(UIImage(named:"pause"), for: UIControl.State.selected)
         initializePlayer()
         collectionView.delegate = collectionDatasource
         collectionView.dataSource = collectionDatasource

@@ -12,13 +12,13 @@ import MapKit
 class MapViewController: UIViewController ,CLLocationManagerDelegate,MKMapViewDelegate{
     
     @IBOutlet var myMap:MKMapView!
-    @IBOutlet var musicView:UIView!
+    @IBOutlet var locationView:UIView!
 
     let locationManager = CLLocationManager()
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.locationView.layer.cornerRadius = 25
         locationManager.delegate = self
         //정확도 최고로
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -27,12 +27,9 @@ class MapViewController: UIViewController ,CLLocationManagerDelegate,MKMapViewDe
         
         myMap.showsUserLocation = true
         myMap.delegate = self
-       
-        
-                musicView.layer.masksToBounds = true // 지정크기를 넘어가면 자르기
-                musicView.layer.cornerRadius = 25
-                musicView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        
+    
+      
+            
         setAnnotation(latitudeValue: 37.566831, longitudeValue: 127.030945, delta: 0.1, title: "모두의 코딩학원", subtitle: "코딩맛집")
         
 

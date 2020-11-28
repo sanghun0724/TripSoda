@@ -9,6 +9,8 @@ import UIKit
 
 class PopupViewController: UIViewController {
     
+    @IBOutlet weak var audioView:UIView!
+    @IBOutlet weak var popView:UIView!
     @IBOutlet weak var imageView:UIImageView!
     @IBOutlet weak var titleLabel:UILabel!
     @IBOutlet weak var subtitleLabel:UILabel!
@@ -16,7 +18,8 @@ class PopupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true 
-       
+        self.popView.layer.cornerRadius = 20
+        self.audioView.layer.cornerRadius = 14
     }
     @IBAction func cancelButton() {
         self.dismiss(animated: true, completion: nil)
