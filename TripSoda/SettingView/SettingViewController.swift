@@ -43,10 +43,10 @@ class SettingViewController:UITableViewController {
         case 5:
             self.performSegue(withIdentifier: "unwind", sender: self)
         case 6:
-            guard let ask = storyboard?.instantiateViewController(withIdentifier: "ask") else {
+            guard let mail = storyboard?.instantiateViewController(withIdentifier: "mail") else {
                 return
             }
-            self.navigationController?.pushViewController(ask, animated: true)
+            self.navigationController?.pushViewController(mail, animated: true)
         default:
             print("something wrong")
         }
