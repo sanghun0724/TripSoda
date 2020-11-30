@@ -19,6 +19,7 @@ class TourDetailController: UIViewController {
         self.tabBarItem.title = nil
         
         self.decoButton.layer.cornerRadius = 20
+        
     }
     
     @IBAction func audioButton(_ sender:Any) {
