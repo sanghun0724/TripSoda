@@ -18,7 +18,8 @@ class MapViewController: UIViewController ,CLLocationManagerDelegate,MKMapViewDe
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.locationView.layer.cornerRadius = 25
+        self.locationView.layer.masksToBounds = true
+        self.locationView.layer.cornerRadius = locationView.frame.width/2
         locationManager.delegate = self
         //정확도 최고로
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -30,7 +31,7 @@ class MapViewController: UIViewController ,CLLocationManagerDelegate,MKMapViewDe
     
       
             
-        setAnnotation(latitudeValue: 37.566831, longitudeValue: 127.030945, delta: 0.1, title: "모두의 코딩학원", subtitle: "코딩맛집")
+        setAnnotation(latitudeValue: 37.566831, longitudeValue: 127.030945, delta: 0.1, title: "영월 Y파크", subtitle: "영월에 대한 소개")
         
 
     }

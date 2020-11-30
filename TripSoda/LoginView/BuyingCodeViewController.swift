@@ -14,7 +14,7 @@ class BuyingCodeViewController: UIViewController,UIGestureRecognizerDelegate,UIN
     @IBOutlet var buyingcodeText:PinCodeTextField!
     
     let number = "01055671914"
-    let theCode = "123456"
+    let theCode = "1234"
     var maxTag = 0
     var tbAccessoryView : UIToolbar?
     
