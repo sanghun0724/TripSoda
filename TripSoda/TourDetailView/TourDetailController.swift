@@ -43,12 +43,14 @@ class TourDetailController: UIViewController {
         UIApplication.shared.open(number)
     }
     
-    @IBAction func MovingToMap(_sender:Any) {
-        guard let map = 
-    }
+//    @IBAction func MovingToMap(_sender:Any) {
+//        guard let map = storyboard?.instantiateViewController(withIdentifier: "location") else {
+//            return
+//        }
+//        map.modalPresentationStyle = .fullScreen
+//        map.present(map, animated: true, completion: nil)
+//    }
+//    
     
-    @IBAction func MovingToAudio(_sender:Any) {
-        
-    }
 
 }

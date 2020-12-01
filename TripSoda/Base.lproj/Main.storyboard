@@ -1301,16 +1301,17 @@
             </objects>
             <point key="canvasLocation" x="5613" y="1296"/>
         </scene>
-        <!--View Controller-->
+        <!--Google Location View Controller-->
         <scene sceneID="49T-J4-Elo">
             <objects>
-                <viewController id="sWb-So-372" sceneMemberID="viewController">
+                <viewController id="sWb-So-372" customClass="GoogleLocationViewController" customModule="TripSoda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g0O-5Y-liy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="kIz-1o-rHS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6md-kZ-4tL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pYb-Kd-RJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1355,12 +1356,17 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ppc-Uk-frX">
                                                                         <rect key="frame" x="322" y="0.0" width="92" height="60"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VbT-19-4Yj">
-                                                                                <rect key="frame" x="31" y="15" width="30" height="25"/>
+                                                                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1U3-mI-aGd">
+                                                                                <rect key="frame" x="32" y="18" width="28" height="24"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                 <color key="tintColor" red="0.40797790880000001" green="0.63865065570000001" blue="0.419573009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                                <imageReference key="image" image="headphones" catalog="system" symbolScale="small"/>
-                                                                            </imageView>
+                                                                                <state key="normal" image="headphones" catalog="system">
+                                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <segue destination="QK6-a5-Zex" kind="presentation" modalPresentationStyle="fullScreen" id="6fe-Fh-HTR"/>
+                                                                                </connections>
+                                                                            </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     </view>
@@ -1421,14 +1427,6 @@
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FL8-do-vXS">
                                                                         <rect key="frame" x="322" y="0.0" width="92" height="60"/>
-                                                                        <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e7R-Qn-xAh">
-                                                                                <rect key="frame" x="31" y="14.5" width="30" height="30"/>
-                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                <color key="tintColor" red="0.40797790880000001" green="0.63865065570000001" blue="0.419573009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                                <imageReference key="image" image="map" catalog="system" symbolScale="small"/>
-                                                                            </imageView>
-                                                                        </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UN5-Hg-i2J">
@@ -1436,6 +1434,17 @@
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                                     </view>
+                                                                    <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huG-gJ-hTa">
+                                                                        <rect key="frame" x="355" y="18" width="27" height="24"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="tintColor" red="0.40797790880000001" green="0.63865065570000001" blue="0.419573009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <state key="normal" image="map.fill" catalog="system">
+                                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <segue destination="sWb-So-372" kind="show" id="Pwy-CE-Bjl"/>
+                                                                        </connections>
+                                                                    </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
@@ -1476,12 +1485,17 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcV-RL-mRr">
                                                                         <rect key="frame" x="322" y="0.0" width="92" height="60"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wLu-QZ-9ON">
-                                                                                <rect key="frame" x="31" y="16" width="30" height="30"/>
+                                                                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pw6-X8-ajp">
+                                                                                <rect key="frame" x="34" y="19" width="25" height="23"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                 <color key="tintColor" red="0.40797790880000001" green="0.63865065570000001" blue="0.419573009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                                <imageReference key="image" image="phone.fill" catalog="system" symbolScale="small"/>
-                                                                            </imageView>
+                                                                                <state key="normal" image="phone.fill" catalog="system">
+                                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="PhoneButtonAction:" destination="tyr-Sn-pos" eventType="touchUpInside" id="PTn-WX-URU"/>
+                                                                                </connections>
+                                                                            </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     </view>
@@ -2449,7 +2463,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="tn0-ID-4Av"/>
+        <segue reference="6fe-Fh-HTR"/>
         <segue reference="E3D-rv-KBy"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -2470,7 +2484,7 @@
         <image name="location.fill" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="mahkeo234401-1" width="391" height="204"/>
-        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="overlay" width="375" height="271"/>
