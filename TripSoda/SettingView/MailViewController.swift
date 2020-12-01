@@ -30,6 +30,7 @@ class MailViewController: UIViewController,MFMailComposeViewControllerDelegate {
         else { let alertController: UIAlertController = UIAlertController(title:"메일 보내기", message:"\n현재 디바이스에서 이메일을 보낼수가 없습니다. 설정에서 이메일 관련 설정을 확인해주세요", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "확인", style: .default, handler: { (alert: UIAlertAction!) in })
             alertController.addAction(defaultAction)
+            alertController.modalPresentationStyle = .fullScreen
             present(alertController, animated: true, completion: nil) }
 
     

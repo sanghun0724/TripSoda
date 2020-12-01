@@ -40,6 +40,7 @@
 		B6E3E2CF255FB94E004AD8C2 /* FristMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3E2CE255FB94E004AD8C2 /* FristMessageViewController.swift */; };
 		B6E3E2D225600011004AD8C2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3E2D125600011004AD8C2 /* ProfileViewController.swift */; };
 		B6EBBB1825590F75004A8DB0 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EBBB1725590F75004A8DB0 /* TabbarController.swift */; };
+		B6F63287257697B8009D8235 /* GoogleLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F63286257697B8009D8235 /* GoogleLocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		B6E3E2CE255FB94E004AD8C2 /* FristMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FristMessageViewController.swift; sourceTree = "<group>"; };
 		B6E3E2D125600011004AD8C2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B6EBBB1725590F75004A8DB0 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		B6F63286257697B8009D8235 /* GoogleLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLocationViewController.swift; sourceTree = "<group>"; };
 		FADCE8F945E1247194E9DC1C /* Pods-TripSoda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripSoda.release.xcconfig"; path = "Target Support Files/Pods-TripSoda/Pods-TripSoda.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 		B67AB6C825540E3A005C9BD3 /* TripSoda */ = {
 			isa = PBXGroup;
 			children = (
+				B6F632852576979B009D8235 /* GooleMap */,
 				B6C3B0C3256F858900777770 /* Style */,
 				B65EDD37255EC46900369BEC /* SettingView */,
 				B69C6654255CFCA400D09DB1 /* MessageView */,
@@ -255,6 +258,14 @@
 				B66B143A257011FB0014A548 /* TTNavigationBar.swift */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		B6F632852576979B009D8235 /* GooleMap */ = {
+			isa = PBXGroup;
+			children = (
+				B6F63286257697B8009D8235 /* GoogleLocationViewController.swift */,
+			);
+			path = GooleMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +404,7 @@
 				B67AB6EF2554281A005C9BD3 /* HomeViewController.swift in Sources */,
 				B69C6656255CFCE400D09DB1 /* MessagerViewController.swift in Sources */,
 				B65EDD39255EC48500369BEC /* SettingViewController.swift in Sources */,
+				B6F63287257697B8009D8235 /* GoogleLocationViewController.swift in Sources */,
 				B67AB6CC25540E3A005C9BD3 /* SceneDelegate.swift in Sources */,
 				B6B1FF0E2555E11A00911530 /* HomeCollectionDetail.swift in Sources */,
 				B685E6242556EA3A00C14ED2 /* MapViewController.swift in Sources */,
