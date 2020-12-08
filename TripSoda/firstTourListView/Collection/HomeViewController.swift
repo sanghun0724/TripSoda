@@ -98,8 +98,8 @@ class HomeViewController:TTNavigationBar,UICollectionViewDelegate,UICollectionVi
         
         cell.placeTitle.text = placeTitle[indexPath.item]
         cell.tourTime.text = reservationTime[indexPath.item]
-        cell.restTime.text = "(\(spareTime[indexPath.item])시간)"
-        cell.restDate.text = "\(spareDate[indexPath.item])일"
+        //cell.restTime.text = "(\(spareTime[indexPath.item])시간)"
+        cell.restDate.text = "7월9일 오전9시 출발,\(spareDate[indexPath.item])일(\(spareTime[indexPath.item])시간)"
         cell.viewPhoto.image = UIImage(named: imageFile[indexPath.item])
         
         return cell

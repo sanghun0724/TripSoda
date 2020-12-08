@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         desginCreated()
     }
     
+    //MARK: design
     func desginCreated() {
         self.navigationController?.navigationBar.isHidden = true
         self.view.backgroundColor = .algae
@@ -41,7 +42,7 @@ class ViewController: UIViewController {
         
     }
     
-    
+    //MARK: IBAction
     @IBAction func goNext(sender:UIButton) {
         let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "pinCode")
         guard let nextView = nextViewController else {
@@ -50,6 +51,8 @@ class ViewController: UIViewController {
         nextView.modalPresentationStyle = .fullScreen
         self.present(nextView, animated: true, completion: nil)
     }
+    
+    //logout Method
     @IBAction func preparForunwind(sender:UIStoryboardSegue) {
         
     }

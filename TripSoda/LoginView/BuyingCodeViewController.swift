@@ -14,7 +14,7 @@ class BuyingCodeViewController: UIViewController,UIGestureRecognizerDelegate,UIN
     @IBOutlet var buyingcodeText:PinCodeTextField!
     
     let number = "01055671914"
-    let theCode = "1234"
+    let theCode = "12345"
     var maxTag = 0
     var tbAccessoryView : UIToolbar?
     
@@ -40,65 +40,7 @@ class BuyingCodeViewController: UIViewController,UIGestureRecognizerDelegate,UIN
     }
     
     
-    
-    
-    
-    
-    
-//    func findMaxTFTag() {
-//        self.view.subviews.forEach { (v) in
-//            if v is UITextField, v.tag > maxTag {
-//                maxTag = v.tag
-//            }
-//        }
-//    }
-    
-//    func findTFWithTag(tag : Int) -> UITextField? {
-//        var retMe : UITextField?
-//        self.view.subviews.forEach { (v) in
-//            if v.tag == tag, let tf = v as? UITextField {
-//                retMe = tf
-//            }
-//        }
-//        return retMe
-//    }
-//
-//    var curTag = 0
-    
-//    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-//        curTag = textField.tag
-//        if tbAccessoryView == nil {
-//            tbAccessoryView = UIToolbar.init(frame:
-//                                                CGRect.init(x: 0, y: 0,
-//                                                            width: self.view.frame.size.width, height: 44))
-//            let bbiPrev = UIBarButtonItem.init(title: "이전",
-//                                               style: .plain, target: self, action: #selector(doBtnPrev))
-//            //              let bbiNext = UIBarButtonItem.init(title: "Next", style: .plain,
-//            //                          target: self, action: #selector(doBtnNext))
-//            let bbiSpacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
-//                                            target: nil, action: nil)
-//            let bbiSubmit = UIBarButtonItem.init(title: "다음", style: .plain,
-//                                                 target: self, action: #selector(doBtnSubmit))
-//            tbAccessoryView?.items = [bbiPrev, bbiSpacer, bbiSubmit]
-//        }
-//        // set the tool bar as this text field's input accessory view
-//        textField.inputAccessoryView = tbAccessoryView
-//        return true
-//    }
-    
-//    @objc
-//    func doBtnPrev() {
-//        // decrement or roll over
-//        curTag = curTag == 0 ? maxTag : curTag-1
-//        findTFWithTag(tag: curTag)?.becomeFirstResponder()
-//        self.navigationController?.popViewController(animated: true)
-//    }
-    
-//    @objc
-//    func doBtnSubmit() {
-//        check()
-//    }
-    
+    //MARK: Button Method
     // 통화걸기
     @IBAction func telePhone() {
         guard let number = URL(string: "tel://" + self.number) else { return }
@@ -123,9 +65,9 @@ class BuyingCodeViewController: UIViewController,UIGestureRecognizerDelegate,UIN
         dismiss(animated: true, completion: nil)
     }
     
+    //MARK: Code Check Method
     //구매코드 체크
     func check() {
-        print("@@@@@@")
         if self.buyingcodeText.text == self.theCode {
             UserInformation.shared.buyingPassword = self.buyingcodeText.text
             let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "tapbar")
@@ -137,7 +79,6 @@ class BuyingCodeViewController: UIViewController,UIGestureRecognizerDelegate,UIN
             
         }
         else {
-            print("왜안되는건데요")
             let wrongViewController =
                 self.storyboard?.instantiateViewController(withIdentifier: "wrong")
             guard let wrongView = wrongViewController else {

@@ -11,7 +11,6 @@ class HomeCollectionCell:UICollectionViewCell {
     
     @IBOutlet weak var viewPhoto:UIImageView!
     @IBOutlet weak var placeTitle:UILabel!
-    @IBOutlet weak var restTime:UILabel!
     @IBOutlet weak var restDate:UILabel!
     @IBOutlet weak var tourTime:UILabel!
     
