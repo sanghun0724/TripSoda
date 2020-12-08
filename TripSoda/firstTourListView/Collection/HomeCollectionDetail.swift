@@ -27,13 +27,13 @@ class HomeCollectionDetail: UIViewController,UICollectionViewDataSource,UICollec
         flowLayoutDetail()
         
     }
-    
+    //corner 
     func viewConer(view:UIView) -> UIView {
         view.layer.cornerRadius = 25
         return view
     }
     
-    
+    //layout Design
     func flowLayoutDetail() {
         let collectionViewLayout:UICollectionViewFlowLayout = {
             let layout = UICollectionViewFlowLayout()
@@ -57,15 +57,6 @@ class HomeCollectionDetail: UIViewController,UICollectionViewDataSource,UICollec
         cell.squeceTime.text = self.placeTime[indexPath.item]
         cell.squenceLabel.text = self.placeSquence[indexPath.item]
         cell.squenceImage.image = UIImage(named: imageFile[indexPath.item])
-        //cell.view1.layer.cornerRadius = 25
-//        cell.view2.layer.cornerRadius = 25
-//        cell.view3.layer.cornerRadius = 25
-//        cell.view4.layer.cornerRadius = 25
-//        cell.view5.layer.cornerRadius = 25
-        
-        
         return cell
     }
-   
-
 }

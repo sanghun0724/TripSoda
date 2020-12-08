@@ -9,7 +9,13 @@ import UIKit
 
 class MessagerViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
-    @IBOutlet var tableView:UITableView!
+    @IBOutlet var tableView:UITableView!{
+        didSet{
+            tableView.dataSource = self
+            tableView.delegate = self
+        }
+    }
+    
     @IBOutlet var searchView:UIView!
    
     
@@ -20,8 +26,6 @@ class MessagerViewController: UIViewController,UITableViewDataSource,UITableView
         searchView.layer.shadowOpacity = 0.5
         searchView.layer.shadowRadius = 3
         searchView.layer.shadowOffset = (CGSize(width: 0, height: 3))
-        tableView.dataSource = self
-        tableView.delegate = self
         // Do any additional setup after loading the view.
     }
     

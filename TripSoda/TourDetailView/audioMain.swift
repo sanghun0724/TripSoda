@@ -13,6 +13,12 @@ class audioMain: UIViewController,AVAudioPlayerDelegate {
     var player: AVAudioPlayer!
     var timer: Timer!
     
+    
+    @IBOutlet weak var layoutCell: UICollectionViewFlowLayout! {
+        didSet{
+            layoutCell.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        }
+    }
     @IBOutlet var decoTopView:UIView!
     @IBOutlet var decoMusicView:UIView!
     @IBOutlet var playPauseButton: UIButton!
@@ -27,6 +33,9 @@ class audioMain: UIViewController,AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+              flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+            }
         self.decoTopView.layer.cornerRadius = 25
         self.decoMusicView.layer.cornerRadius = 25
         decoMusicView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -37,7 +46,6 @@ class audioMain: UIViewController,AVAudioPlayerDelegate {
         collectionView.delegate = collectionDatasource
         collectionView.dataSource = collectionDatasource
         UIDesine()
-        collectionView.isPagingEnabled = true
         collectionView.reloadData()
     }
     

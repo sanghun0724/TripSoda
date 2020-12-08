@@ -60,6 +60,7 @@ class HomeViewController:TTNavigationBar,UICollectionViewDelegate,UICollectionVi
         
         
     }
+    
     @IBAction func backButton(_sender:Any) {
         self.performSegue(withIdentifier: "back", sender: self)
     }
@@ -69,12 +70,14 @@ class HomeViewController:TTNavigationBar,UICollectionViewDelegate,UICollectionVi
         dropDown.show()
     }
     
+    //sorted menu
     func requestSortedCell() {
         spareDate.sort()
         spareTime.sort()
         collectionView.reloadData()
     }
     
+    //layout Design
     func flowLayout() {
         let collectionViewLayout:UICollectionViewFlowLayout = {
             let layout = UICollectionViewFlowLayout()
@@ -105,6 +108,7 @@ class HomeViewController:TTNavigationBar,UICollectionViewDelegate,UICollectionVi
         return cell
     }
     
+    //transmit Data
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "more" {
             guard let nextController:HomeCollectionDetail = segue.destination as? HomeCollectionDetail else {
