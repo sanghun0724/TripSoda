@@ -33,9 +33,6 @@ class audioMain: UIViewController,AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
-              flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-            }
         self.decoTopView.layer.cornerRadius = 25
         self.decoMusicView.layer.cornerRadius = 25
         decoMusicView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -60,10 +57,11 @@ class audioMain: UIViewController,AVAudioPlayerDelegate {
     func UIDesine() {
         let collectionViewLayout:UICollectionViewFlowLayout = {
             let layout = UICollectionViewFlowLayout()
-            layout.itemSize = CGSize(width: 414 , height: 460 )
+            layout.itemSize = CGSize(width: view.bounds.width , height: view.bounds.height )
             layout.minimumLineSpacing = 20
             layout.sectionInset = UIEdgeInsets.zero
             layout.scrollDirection = .horizontal
+            layout.itemSize = CGSize(width: view.bounds.width, height: 100)
             return layout
         }()
         collectionView.collectionViewLayout = collectionViewLayout

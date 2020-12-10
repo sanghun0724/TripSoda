@@ -7,7 +7,7 @@
 
 import UIKit
 
-class audioMainCollection: NSObject,UICollectionViewDataSource,UICollectionViewDelegate {
+class audioMainCollection: NSObject,UICollectionViewDataSource,UICollectionViewDelegate{
     
     let audioLabel = ["고씨동굴","영월파크","서울공원"]
     let audioSubLabel = ["3개의 오디오 중 첫번째 이야기","3개의 오디오 중 첫번째 이야기","3개의 오디오 중 첫번째 이야기"]
@@ -26,4 +26,7 @@ class audioMainCollection: NSObject,UICollectionViewDataSource,UICollectionViewD
         
         return cell
     }
+    
+    
+    
 }
