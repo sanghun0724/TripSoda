@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class audioMain: UIViewController,AVAudioPlayerDelegate {
+class audioMain: UIViewController,AVAudioPlayerDelegate,UICollectionViewDelegateFlowLayout{
 
     var player: AVAudioPlayer!
     var timer: Timer!
@@ -54,14 +54,14 @@ class audioMain: UIViewController,AVAudioPlayerDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
+
     func UIDesine() {
         let collectionViewLayout:UICollectionViewFlowLayout = {
             let layout = UICollectionViewFlowLayout()
-            layout.itemSize = CGSize(width: view.bounds.width , height: view.bounds.height )
             layout.minimumLineSpacing = 20
             layout.sectionInset = UIEdgeInsets.zero
             layout.scrollDirection = .horizontal
-            layout.itemSize = CGSize(width: view.bounds.width, height: 100)
+            layout.itemSize = CGSize(width: view.bounds.width, height: collectionView.bounds.height)
             return layout
         }()
         collectionView.collectionViewLayout = collectionViewLayout
